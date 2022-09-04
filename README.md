@@ -1,4 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -8,8 +7,6 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -17,10 +14,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Azure Repositories</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    LIST OF MANY AZURE SCRIPT FOR YOUR DEPLOYMENT!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
