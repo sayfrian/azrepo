@@ -38,6 +38,18 @@
         "virtualMachineRG": {
             "value": "enhanced"
         },
+        "imagePublisher": {
+            "value": "MicrosoftWindowsDesktop"
+        },
+        "imageOffer": {
+            "value": "Windows-10"
+        },
+        "imageSku": {
+            "value": "win10-21h2-pro"
+        },
+        "imageVersion": {
+            "value": "latest"
+        },
         "osDiskType": {
             "value": "StandardSSD_LRS"
         },
