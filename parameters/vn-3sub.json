@@ -9,10 +9,10 @@
             "value": {}
         },
         "virtualNetworkName": {
-            "value": "vnetidnid"
+            "value": "vnetminilico"
         },
         "resourceGroup": {
-            "value": "idnid"
+            "value": "minilico"
         },
         "addressSpaces": {
             "value": [
