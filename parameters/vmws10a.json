@@ -82,15 +82,6 @@
         },
         "autoShutdownTimeZone": {
             "value": "SE Asia Standard Time"
-        },
-        "autoShutdownNotificationStatus": {
-            "value": "Disabled"
-        },
-        "autoShutdownNotificationLocale": {
-            "value": "en"
-        },
-        "autoShutdownNotificationEmail": {
-            "value": "sayful.adrian@outlook.com"
         }
     }
 }
