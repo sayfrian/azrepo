@@ -6,7 +6,7 @@
             "value": "eastus"
         },
         "networkInterfaceName": {
-            "value": "vnicws10a"
+            "value": "vnicex19a"
         },
         "enableAcceleratedNetworking": {
             "value": false
@@ -18,34 +18,34 @@
             "value": "vnetPbl"
         },
         "privateIPAddress": {
-            "value" : "10.0.0.101"
+            "value" : "10.0.0.12"
         },
         "virtualNetworkId": {
             "value": "/subscriptions/411a3a82-52c3-477a-a776-6b8c95cc8f93/resourceGroups/pavilico/providers/Microsoft.Network/virtualNetworks/vnetpavilico"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/411a3a82-52c3-477a-a776-6b8c95cc8f93/resourceGroups/pavilico/providers/Microsoft.Network/publicIPAddresses/pipws10a"
+            "value": "/subscriptions/411a3a82-52c3-477a-a776-6b8c95cc8f93/resourceGroups/pavilico/providers/Microsoft.Network/publicIPAddresses/pipex19a"
         },
         "pipDeleteOption": {
             "value": "Delete"
         },
         "virtualMachineName": {
-            "value": "vmws10a"
+            "value": "vmex19a"
         },
         "virtualMachineComputerName": {
-            "value": "vmws10a"
+            "value": "vmex19a"
         },
         "virtualMachineRG": {
             "value": "pavilico"
         },
         "imagePublisher": {
-            "value": "MicrosoftWindowsDesktop"
+            "value": "MicrosoftWindowsServer"
         },
         "imageOffer": {
-            "value": "Windows-10"
+            "value": "WindowsServer"
         },
         "imageSku": {
-            "value": "win10-21h2-pro"
+            "value": "2019-datacenter-gensecond"
         },
         "imageVersion": {
             "value": "latest"
@@ -57,7 +57,7 @@
             "value": "Delete"
         },
         "virtualMachineSize": {
-            "value": "Standard_B2s"
+            "value": "Standard_B2ms"
         },
         "nicDeleteOption": {
             "value": "Delete"

@@ -9,10 +9,10 @@
             "value": {}
         },
         "virtualNetworkName": {
-            "value": "vnetenhanced"
+            "value": "vnetpavilico"
         },
         "resourceGroup": {
-            "value": "enhanced"
+            "value": "pavilico"
         },
         "addressSpaces": {
             "value": [

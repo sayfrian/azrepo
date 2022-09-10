@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "networkInterfaceName": {
-            "value": "vnicws10a"
+            "value": "vnicex19a"
         },
         "location": {
             "value": "eastus"
@@ -15,7 +15,7 @@
             "value": "Static"
         },
         "privateIPv4Address": {
-            "value": "10.0.0.224"
+            "value": "10.0.0.222"
         },
         "networkSecurityGroupId": {
             "value": "/subscriptions/411a3a82-52c3-477a-a776-6b8c95cc8f93/resourceGroups/idnid/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"

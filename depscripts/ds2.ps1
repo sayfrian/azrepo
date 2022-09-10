@@ -1,22 +1,22 @@
-$newrg = "pvlc"
+$rg = "pavilico"
 $loc = "eastus"
 
 Write-Output `n "================================ ENVIRONMENT CREATION ================================"
 
 Write-Output `n "======================================================================================" 
-Write-Output    "================================  Creating RG: pvlc   ================================" 
+Write-Output    "================================  Creating RG: pavilico   ================================" 
 Write-Output    "======================================================================================" `n
 
-$check = Get-AzResourceGroup -Name $newrg -ErrorAction SilentlyContinue
+$check = Get-AzResourceGroup -Name $rg -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 
-    New-AzResourceGroup -Name $newrg -Location $loc
+    New-AzResourceGroup -Name $rg -Location $loc
 	
 }
 else{
 
-    Write-Host "RESOURCEGROUP: $newrg already exist"
+    Write-Host "RESOURCEGROUP: $rg already exist"
 	
 }
 
@@ -24,14 +24,14 @@ Write-Output `n "===============================================================
 Write-Output    "=================================   Creating  VNET   =================================" 
 Write-Output    "======================================================================================" `n
 
-$check = Get-AzVirtualNetwork -Name 'vnetpvlc' -ErrorAction SilentlyContinue
+$check = Get-AzVirtualNetwork -Name 'vnetpavilico' -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $newrg `
-	  -TemplateUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/vnet.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/vneta.json"
+	  -ResourceGroupName $rg `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vn-1sub.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vneta.json"
 }
 
 else{
@@ -50,37 +50,15 @@ if($check -eq $null){
 
 New-AzResourceGroupDeployment `
   -Name remoteTemplateDeployment `
-  -ResourceGroupName $newrg `
-  -TemplateUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/nsg.json" `
-  -TemplateParameterUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/nsgPbl.json"
+  -ResourceGroupName $rg `
+  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/nsg.json" `
+  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/nsgPbl.json"
   
 }
 
 else{
 
     Write-Host "NSGPBL already exist"
-
-}
-
-Write-Output `n "======================================================================================" 
-Write-Output    "===============================  Creating PubIP-UBT01A ================================" 
-Write-Output    "======================================================================================" `n
-
-$check = Get-AzPublicIpAddress -Name 'pipubt16a' -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $newrg `
-	  -TemplateUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/pip.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/pipubt16a.json"
-	  
-}
-
-else{
-
-    Write-Host "PIPUBT01A already exist"
 
 }
 
@@ -94,9 +72,9 @@ if($check -eq $null){
 
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $newrg `
-	  -TemplateUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/vnic.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/vnicubt16a.json"
+	  -ResourceGroupName $rg `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/pavilico/master/vnic.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vnicubt22a.json"
 	  
 }
 
@@ -116,9 +94,9 @@ if($check -eq $null){
 
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $newrg `
-	  -TemplateUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/vmubt16.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/ceriainid/pvlc/master/vmubt16a.json"
+	  -ResourceGroupName $rg `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/pavilico/master/vmubt16.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/pavilico/master/vmubt16a.json"
 	  
 }
 
@@ -132,7 +110,7 @@ Write-Output `n "===============================================================
 Write-Output    "================================   Configuration SSH  ================================" 
 Write-Output    "======================================================================================" `n
 
-$script = Invoke-WebRequest "https://raw.githubusercontent.com/ceriainid/pvlc/master/scriptconfnsg.ps1"
+$script = Invoke-WebRequest "https://raw.githubusercontent.com/sayfuladrian/pavilico/master/scriptconfnsg.ps1"
 Invoke-Expression $($script.Content)
 
 Write-Output `n "======================================================================================" 
