@@ -142,7 +142,7 @@
                             "storageAccountType": "[parameters('osDiskType')]"
                         },
                         "deleteOption": "[parameters('osDiskDeleteOption')]",
-						"diskSizeGB": 64
+						"diskSizeGB": 128
                     },
                     "imageReference": {
                         "publisher": "[parameters('imagePublisher')]",
