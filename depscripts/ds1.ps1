@@ -34,8 +34,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vn-2sub.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vn-2sub.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vn-2sub.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vn-2sub.json"
 }
 
 else{
@@ -55,8 +55,8 @@ if($check -eq $null){
 New-AzResourceGroupDeployment `
   -Name remoteTemplateDeployment `
   -ResourceGroupName $rg `
-  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/nsg.json" `
-  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/nsgPbl.json"
+  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/nsg.json" `
+  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/nsgPbl.json"
   
 }
 
@@ -75,8 +75,8 @@ if($check -eq $null){
 New-AzResourceGroupDeployment `
   -Name remoteTemplateDeployment `
   -ResourceGroupName $rg `
-  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/nsg.json" `
-  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/nsgPbl.json"
+  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/nsg.json" `
+  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/nsgPbl.json"
   
 }
 
@@ -97,8 +97,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/pipBscWs10a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscWs10a.json"
 	  
 }
 
@@ -117,8 +117,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/pipBscAd19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscAd19a.json"
 	  
 }
 
@@ -137,8 +137,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/pipBscEx19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscEx19a.json"
 	  
 }
 
@@ -157,8 +157,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/pipBscHv19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscHv19a.json"
 	  
 }
 
@@ -179,8 +179,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vnic-ip4.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vnicws10a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vnic-ip4.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vnicws10a.json"
 	  
 }
 
@@ -199,8 +199,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vnic-ip4.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vnicad19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vnic-ip4.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vnicad19a.json"
 	  
 }
 
@@ -219,8 +219,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vnic-ip4.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vnicex19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vnic-ip4.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vnicex19a.json"
 	  
 }
 
@@ -239,8 +239,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vnic-ip4.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vnichv19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vnic-ip4.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vnichv19a.json"
 	  
 }
 
@@ -261,8 +261,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vm-pip-nodisk.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vmws10a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vm-pip-nodisk.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vmws10a.json"
 	  
 }
 
@@ -281,8 +281,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vm-pip-nodisk.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vmad19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vm-pip-nodisk.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vmad19a.json"
 	  
 }
 
@@ -301,8 +301,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vm-pip-nodisk.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vmex19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vm-pip-nodisk.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vmex19a.json"
 	  
 }
 
@@ -321,8 +321,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vm-pip-nodisk.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vmhv19a.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vm-pip-nodisk.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vmhv19a.json"
 	  
 }
 

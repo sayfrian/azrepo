@@ -30,8 +30,8 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/vn-1sub.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vneta.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vn-1sub.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vneta.json"
 }
 
 else{
@@ -51,8 +51,8 @@ if($check -eq $null){
 New-AzResourceGroupDeployment `
   -Name remoteTemplateDeployment `
   -ResourceGroupName $rg `
-  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/templates/nsg.json" `
-  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/nsgPbl.json"
+  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/nsg.json" `
+  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/nsgPbl.json"
   
 }
 
@@ -74,7 +74,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/pavilico/master/vnic.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/parameters/vnicubt22a.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/vnicubt22a.json"
 	  
 }
 
