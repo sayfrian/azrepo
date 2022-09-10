@@ -51,7 +51,7 @@
             "value": "latest"
         },
         "osDiskType": {
-            "value": "StandardSSD_LRS"
+            "value": "Standard_LRS"
         },
         "osDiskDeleteOption": {
             "value": "Delete"
