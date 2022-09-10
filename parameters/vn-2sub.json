@@ -32,7 +32,7 @@
             "value": "10.0.0.0/24"
         },
         "subnet1_name": {
-            "value": "vnetDmz"
+            "value": "vnetPvt"
         },
         "subnet1_addressRange": {
             "value": "10.0.1.0/24"
