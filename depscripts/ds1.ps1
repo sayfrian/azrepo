@@ -1,14 +1,14 @@
-$rg = "pavilico"
+$rg = "minilico"
 $loc = "eastus"
 
-$vnet = "vnetpavilico"
+$vnet = "vnetminilico"
 $nsgpbl = "nsgpbl"
 $nsgpvt = "nsgpvt"
 
 Write-Output `n "================================ ENVIRONMENT CREATION ================================"
 
 Write-Output `n "======================================================================================" 
-Write-Output    "================================  Creating RG: pavilico   ================================" 
+Write-Output    "================================  Creating RG: minilico   ================================" 
 Write-Output    "======================================================================================" `n
 
 $check = Get-AzResourceGroup -Name $rg -ErrorAction SilentlyContinue
@@ -336,7 +336,7 @@ Write-Output `n "===============================================================
 Write-Output    "================================   Configuration RDP  ================================" 
 Write-Output    "======================================================================================" `n
 
-$script = Invoke-WebRequest "https://raw.githubusercontent.com/sayfuladrian/pavilico/master/scriptconfnsg.ps1"
+$script = Invoke-WebRequest "https://raw.githubusercontent.com/sayfuladrian/minilico/master/scriptconfnsg.ps1"
 Invoke-Expression $($script.Content)
 
 Write-Output `n "======================================================================================" 
