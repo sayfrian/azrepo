@@ -76,7 +76,7 @@ New-AzResourceGroupDeployment `
   -Name remoteTemplateDeployment `
   -ResourceGroupName $rg `
   -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/nsg.json" `
-  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/nsgPbl.json"
+  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/nsgPvt.json"
   
 }
 
