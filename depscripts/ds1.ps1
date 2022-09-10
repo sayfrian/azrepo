@@ -336,7 +336,7 @@ Write-Output `n "===============================================================
 Write-Output    "================================   Configuration RDP  ================================" 
 Write-Output    "======================================================================================" `n
 
-$script = Invoke-WebRequest "https://raw.githubusercontent.com/sayfuladrian/minilico/main/scriptconfnsg.ps1"
+$script = Invoke-WebRequest "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/confscripts/nsg-rdp.ps1"
 Invoke-Expression $($script.Content)
 
 Write-Output `n "======================================================================================" 
