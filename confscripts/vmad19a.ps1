@@ -62,15 +62,16 @@ Write-Output    "================================  Configure AD & DNS  =========
 Write-Output    "======================================================================================" `n
 
 # Download the script from GitHub
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/confxmls/addns.xml" -OutFile .\Downloads\addns.xml
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/confxmls/addns.xml" -OutFile .\addns.xml
 
 # Install AD and DNS with the downloaded script.
-Install-WindowsFeature -ConfigurationFilePath .\Downloads\addns.xml
+Install-WindowsFeature -ConfigurationFilePath .\addns.xml
 
 Write-Output `n "======================================================================================" 
 Write-Output    "==================================  Promote VMAD01  ==================================" 
 Write-Output    "======================================================================================" `n
 
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Install-Module ADDSDeployment
 Import-Module ADDSDeployment
 $passAd = ConvertTo-SecureString "Jakarta@2022" -AsPlainText -Force
