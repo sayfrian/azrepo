@@ -1,7 +1,7 @@
 $nsgnames = @('nsgPbl')
-$rulename = "allow RDP"
-$ruledesc = "allow RDP to connect to the server"
-$ruleport = 3389
+$rulename = "allow SMTP25"
+$ruledesc = "allow SMTP25 to the internet"
+$ruleport = 25
 $getownip = (Invoke-WebRequest -uri "https://ipinfo.io/ip").Content
 
 
@@ -18,12 +18,12 @@ function AddOrUpdateRDPRecord {
                 -Description $ruledesc `
                 -Access Allow `
                 -Protocol TCP `
-                -Direction Inbound `
-                -Priority 100 `
-                -SourceAddressPrefix $getownip `
-                -SourcePortRange * `
+                -Direction Outbound `
+                -Priority 125 `
+                -SourceAddressPrefix * `
+                -SourcePortRange $ruleport `
                 -DestinationAddressPrefix * `
-                -DestinationPortRange $ruleport `
+                -DestinationPortRange `
                 -NetworkSecurityGroup $nsg
         }
         else
@@ -34,12 +34,12 @@ function AddOrUpdateRDPRecord {
                 -Description $ruledesc `
                 -Access Allow `
                 -Protocol TCP `
-                -Direction Inbound `
-                -Priority 100 `
-                -SourceAddressPrefix $getownip `
-                -SourcePortRange * `
+                -Direction Outbound `
+                -Priority 125 `
+                -SourceAddressPrefix * `
+                -SourcePortRange $ruleport `
                 -DestinationAddressPrefix * `
-                -DestinationPortRange $ruleport
+                -DestinationPortRange 
         }
 
         # Save changes to the NSG
