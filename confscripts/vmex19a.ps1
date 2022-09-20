@@ -8,7 +8,7 @@ Write-Output `n "===============================================================
 Write-Output    "===============================  Set IPv4  to Static  ================================" 
 Write-Output    "======================================================================================" `n
 
-$IP = "10.0.0.11"
+$IP = "10.0.0.12"
 $MaskBits = 24 # This means subnet mask = 255.255.255.0
 $Gateway = "10.0.0.1"
 $Dns = @('10.0.0.11','8.8.8.8')
@@ -37,7 +37,7 @@ $adapter | New-NetIPAddress `
 $adapter | Set-DnsClientServerAddress -ServerAddresses $DNS
 
 Write-Output `n "======================================================================================" 
-Write-Output    "===============================  Disable  IPv6 VMAD01 ================================" 
+Write-Output    "===============================  Disable  IPv6 VMEX01  ================================" 
 Write-Output    "======================================================================================" `n
 
 # Disable IPv6 on Ethernet Adapter
@@ -45,29 +45,22 @@ Get-NetAdapterBinding -ComponentID ms_tcpip6
 Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_tcpip6
 
 Write-Output `n "======================================================================================" 
-Write-Output    "============================  Change Drive Letter Disk  ==============================" 
+Write-Output    "===============================  Wait for 15 seconds  ================================" 
 Write-Output    "======================================================================================" `n
 
-$DVD_Drive = Get-WmiObject win32_volume -filter 'DriveType=5'
-$DVD_Drive.DriveLetter = "A:"
-$DVD_Drive.Put()
+Function Sleep-Progress($seconds) {
+    $s = 0;
+    Do {
+        $p = [math]::Round(100 - (($seconds - $s) / $seconds * 100));
+        Write-Progress -Activity "Waiting..." -Status "$p% Complete:" -SecondsRemaining ($seconds - $s) -PercentComplete $p;
+        [System.Threading.Thread]::Sleep(1000)
+        $s++;
+    }
+    While($s -lt $seconds);
+    
+}
 
-Write-Output `n "======================================================================================" 
-Write-Output    "===============================  Initialize RAW Disk  ================================" 
-Write-Output    "======================================================================================" `n
-
-Get-Disk |
-Where partitionstyle -eq ‘raw’ |
-Initialize-Disk -PartitionStyle GPT -PassThru |
-New-Partition -AssignDriveLetter -UseMaximumSize |
-Format-Volume -FileSystem NTFS -NewFileSystemLabel “Data Disk” -Confirm:$false
-
-Write-Output `n "======================================================================================" 
-Write-Output    "==============================  Create DB&LOG NTDS AD  ===============================" 
-Write-Output    "======================================================================================" `n
-
-New-Item -ItemType Directory -Force -Path C:\Windows\DBNTDS\
-New-Item -ItemType Directory -Force -Path C:\Windows\LOGNTDS\
+Sleep-Progress 15
 
 Write-Output `n "======================================================================================" 
 Write-Output    "==============================  Install Google Chrome  ===============================" 
@@ -76,44 +69,110 @@ Write-Output    "===============================================================
 $LocalTempDir = $env:TEMP; $ChromeInstaller = "ChromeInstaller.exe"; (new-object    System.Net.WebClient).DownloadFile('http://dl.google.com/chrome/install/375.126/chrome_installer.exe', "$LocalTempDir\$ChromeInstaller"); & "$LocalTempDir\$ChromeInstaller" /silent /install; $Process2Monitor =  "ChromeInstaller"; Do { $ProcessesFound = Get-Process | ?{$Process2Monitor -contains $_.Name} | Select-Object -ExpandProperty Name; If ($ProcessesFound) { "Still running: $($ProcessesFound -join ', ')" | Write-Host; Start-Sleep -Seconds 2 } else { rm "$LocalTempDir\$ChromeInstaller" -ErrorAction SilentlyContinue -Verbose } } Until (!$ProcessesFound)
 
 Write-Output `n "======================================================================================" 
-Write-Output    "================================  Configure AD & DNS  ================================" 
+Write-Output    "===================================  Join Domain  ====================================" 
 Write-Output    "======================================================================================" `n
 
-# Download the script from GitHub
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sayfuladrian/azure/feature/elbrm/confad01-addns.xml" -OutFile .\Downloads\confad01-addns.xml
-
-# Install AD and DNS with the downloaded script.
-Install-WindowsFeature -ConfigurationFilePath .\Downloads\confad01-addns.xml
+$dc = "pavilico.my.id" # Specify the domain to join.
+$pw = "Password_104" | ConvertTo-SecureString -asPlainText –Force # Specify the password for the domain admin.
+$usr = "$dc\adminadop" # Specify the domain admin account.
+$creds = New-Object System.Management.Automation.PSCredential($usr,$pw)
+Add-Computer -DomainName $dc -Credential $creds -restart -force -verbose 
+# Note that the computer will be restarted automatically.
 
 Write-Output `n "======================================================================================" 
-Write-Output    "==================================  Promote VMAD01  ==================================" 
+Write-Output    "===========================  Download Exchange 2019 Cu12   ===========================" 
 Write-Output    "======================================================================================" `n
 
-Import-Module ADDSDeployment
-$passAd = ConvertTo-SecureString "Jakarta@2022" -AsPlainText -Force
-Install-ADDSForest `
--CreateDnsDelegation:$false `
--DatabasePath "E:\Windows\DBNTDS" `
--DomainMode "WinThreshold" `
--DomainName "pavilico.my.id" `
--DomainNetbiosName "AD" `
--ForestMode "WinThreshold" `
--InstallDns:$true `
--LogPath "E:\Windows\LOGNTDS" `
--NoRebootOnCompletion:$false `
--SysvolPath "C:\Windows\SYSVOL" `
--Force:$true `
--SafeModeAdministratorPassword $passAd
+mkdir "C:\TEMP Downloads" -Force
+Sleep-Progress 5
+$URL = 'https://download.microsoft.com/download/b/c/7/bc766694-8398-4258-8e1e-ce4ddb9b3f7d/ExchangeServer2019-x64-CU12.ISO'
+$Path= "C:\TEMP Downloads\EX19-x64-CU12.iso"
+(New-Object System.Net.WebClient).DownloadFile($URL, $Path)
 
 Write-Output `n "======================================================================================" 
-Write-Output    "==========================  Change DNS from loop to itself  ==========================" 
+Write-Output    "=============================  Mount Exchange 2019 Cu12  =============================" 
 Write-Output    "======================================================================================" `n
 
-$Dns = @('10.0.2.13','8.8.8.8')
-$adapter = Get-NetAdapter -Name "ethernet"
-$adapter | Set-DnsClientServerAddress -ServerAddresses $Dns
+Mount-DiskImage -ImagePath 'C:\TEMP Downloads\EX19-X64-CU12.ISO'
 
 Write-Output `n "======================================================================================" 
-Write-Output    "===========================  Add Reverse Lookup Zone on DNS  ===========================" 
+Write-Output    "==============================  Exchange  Installation  ==============================" 
 Write-Output    "======================================================================================" `n
 
+Write-Output `n "=========================  Download Net 4.8 Installation  ============================" `n
+
+$URL = "https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe"
+$Path= "C:\TEMP Downloads\netfw_4-8.exe"
+(New-Object System.Net.WebClient).DownloadFile($URL, $Path)
+
+Write-Output `n "=============================  Download VCRedist 2012  ===============================" `n
+
+$URL = "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe"
+$Path= "C:\TEMP Downloads\vcredist2012_x64.exe"
+(New-Object System.Net.WebClient).DownloadFile($URL, $Path)
+
+Write-Output `n "=============================  Download VCRedist 2013  ===============================" `n
+
+$URL = "https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe"
+$Path= "C:\TEMP Downloads\vcredist2013_x64.exe"
+(New-Object System.Net.WebClient).DownloadFile($URL, $Path)
+
+Write-Output `n "==================  Download Unified Communication Installation  =====================" `n
+
+$URL = "https://download.microsoft.com/download/2/C/4/2C47A5C1-A1F3-4843-B9FE-84C0032C61EC/UcmaRuntimeSetup.exe"
+$Path= "C:\TEMP Downloads\UcmaSetup.exe"
+(New-Object System.Net.WebClient).DownloadFile($URL, $Path)
+
+Write-Output `n "===================  Download Unified Communication Installation  ====================" `n
+
+$URL = "https://webpihandler.azurewebsites.net/web/handlers/webpi.ashx/getinstaller/urlrewrite2.appids"
+$Path= "C:\TEMP Downloads\urlrewrite.exe"
+(New-Object System.Net.WebClient).DownloadFile($URL, $Path)
+
+Write-Output `n "==========================  Pre-requisite:  Installation  ============================" `n
+
+Start-Process -FilePath "C:\TEMP Downloads\vcredist2012_x64.exe" /silent -verbose
+Start-Process -FilePath "C:\TEMP Downloads\vcredist2013_x64.exe" /silent -verbose
+
+Start-Process -FilePath "C:\TEMP Downloads\netfw_4-8.exe" /silent -verbose
+$confirmation = Read-Host "Udah selesai installnya? [pencet enter kalo udah]"
+
+Start-Process -FilePath "C:\TEMP Downloads\UcmaSetup.exe" /silent -verbose
+$confirmation = Read-Host "Udah selesai installnya? [pencet enter kalo udah]"
+
+Start-Process -FilePath "C:\TEMP Downloads\rewrite21.msi" /silent -verbose
+$confirmation = Read-Host "Udah selesai installnya? [pencet enter kalo udah]"
+
+Write-Output `n "=========================  Exchange Inst.  Prepare Schema  =========================" `n
+
+.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareSchema
+
+Write-Output `n "===========================  Exchange Inst. Prepare AD  ============================" `n
+
+.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAD /OrganizationName: "PAVILICO"
+
+Write-Output `n "========================  Exchange Inst. Prepare Domains  ==========================" `n
+
+.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAllDomains
+
+Write-Output `n "=============================  Exchange Version List  ==============================" `n
+
+# Exchange Schema Version
+$sc = (Get-ADRootDSE).SchemaNamingContext
+$ob = "CN=ms-Exch-Schema-Version-Pt," + $sc
+Write-Output "RangeUpper: $((Get-ADObject $ob -pr rangeUpper).rangeUpper)"
+ 
+# Exchange Object Version (domain)
+$dc = (Get-ADRootDSE).DefaultNamingContext
+$ob = "CN=Microsoft Exchange System Objects," + $dc
+Write-Output "ObjectVersion (Default): $((Get-ADObject $ob -pr objectVersion).objectVersion)"
+ 
+# Exchange Object Version (forest)
+$cc = (Get-ADRootDSE).ConfigurationNamingContext
+$fl = "(objectClass=msExchOrganizationContainer)"
+Write-Output "ObjectVersion (Configuration): $((Get-ADObject -LDAPFilter $fl -SearchBase $cc -pr objectVersion).objectVersion)"
+
+Write-Output `n "===============================  Run Installation  ================================" `n
+
+cd 'C:\TEMP Downloads\Exchange\'
+.\Setup.exe 
