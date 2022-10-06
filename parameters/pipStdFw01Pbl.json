@@ -25,6 +25,9 @@
         },
         "domainNameLabel": {
             "value": "pipfw01pbl"
-        }
+        },
+		"tier": {
+			"value": "Regional"
+		}
     }
 }
