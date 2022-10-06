@@ -36,6 +36,7 @@
         },
         "tier": {
             "type": "string",
+			"DefaultValues" : "Regional",
             "allowedValues": [
                 "Regional",
                 "Global"
