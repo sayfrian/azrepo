@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "extendedLocation": {
+            "value": {}
+        },
+        "sku": {
+            "value": "Standard"
+        },
+        "name": {
+            "value": "pipfw01mgt"
+        },
+        "publicIPAllocationMethod": {
+            "value": "Static"
+        },
+        "idleTimeoutInMinutes": {
+            "value": 4
+        },
+        "publicIpAddressVersion": {
+            "value": "IPv4"
+        },
+        "domainNameLabel": {
+            "value": "pipfw01mgt"
+        }
+    }
+}

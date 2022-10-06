@@ -9,13 +9,13 @@
             "value": {}
         },
         "sku": {
-            "value": "Basic"
+            "value": "Standard"
         },
         "name": {
-            "value": "pipfw01"
+            "value": "pipfw01pbl"
         },
         "publicIPAllocationMethod": {
-            "value": "Dynamic"
+            "value": "Static"
         },
         "idleTimeoutInMinutes": {
             "value": 4
@@ -24,7 +24,7 @@
             "value": "IPv4"
         },
         "domainNameLabel": {
-            "value": "pipfw01"
+            "value": "pipfw01pbl"
         }
     }
 }

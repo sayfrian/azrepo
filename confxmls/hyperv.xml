@@ -1,0 +1,267 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Collections.ObjectModel.Collection`1[[System.Management.Automation.PSObject, System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+      <T>System.Object</T>
+    </TN>
+    <LST>
+      <Obj RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/ServerComponent_HyperV</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ServerComponent_HyperV</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>ServerComponent_HyperV</ToString>
+        <Props>
+          <S N="DefaultVirtualHardDiskPath">C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks</S>
+          <S N="DefaultVirtualMachinePath">C:\ProgramData\Microsoft\Windows\Hyper-V</S>
+          <B N="EnableVirtualMachineMigration">false</B>
+          <S N="VirtualMachineMigrationAuthenticationType">credssp</S>
+          <Obj N="VirtualSwitchNetworkAdapters" RefId="2">
+            <TN RefId="2">
+              <T>System.String[]</T>
+              <T>System.Array</T>
+              <T>System.Object</T>
+            </TN>
+            <LST>
+              <S>89b9665e-dd69-4b1e-bf5e-d2fdc76fb93f</S>
+            </LST>
+          </Obj>
+          <S N="PSComputerName">vmhv19a</S>
+        </Props>
+        <MS>
+          <I32 N="NumericId">20</I32>
+          <Obj N="__ClassMetadata" RefId="3">
+            <TN RefId="3">
+              <T>System.Collections.ArrayList</T>
+              <T>System.Object</T>
+            </TN>
+            <LST>
+              <Obj RefId="4">
+                <MS>
+                  <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188550600</I32>
+                  <S N="MiXml">&lt;CLASS NAME="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                </MS>
+              </Obj>
+              <Obj RefId="5">
+                <MS>
+                  <S N="ClassName">ServerComponent_HyperV</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188405000</I32>
+                  <S N="MiXml">&lt;CLASS NAME="ServerComponent_HyperV" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;1.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;Hyper-V&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="DefaultVirtualHardDiskPath" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DefaultVirtualMachinePath" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="EnableVirtualMachineMigration" TYPE="boolean"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="VirtualMachineMigrationAuthenticationType" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="VirtualSwitchNetworkAdapters" TYPE="string"&gt;&lt;/PROPERTY.ARRAY&gt;&lt;/CLASS&gt;</S>
+                </MS>
+              </Obj>
+            </LST>
+          </Obj>
+          <Obj N="__InstanceMetadata" RefId="6">
+            <MS>
+              <S N="Modified">DefaultVirtualHardDiskPath DefaultVirtualMachinePath EnableVirtualMachineMigration VirtualMachineMigrationAuthenticationType VirtualSwitchNetworkAdapters</S>
+            </MS>
+          </Obj>
+        </MS>
+      </Obj>
+      <Obj RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/ServerComponent_Hyper_V_PowerShell</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ServerComponent_Hyper_V_PowerShell</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>ServerComponent_Hyper_V_PowerShell</ToString>
+        <Props>
+          <S N="PSComputerName">vmhv19a</S>
+        </Props>
+        <MS>
+          <I32 N="NumericId">457</I32>
+          <Obj N="__ClassMetadata" RefId="8">
+            <TNRef RefId="3" />
+            <LST>
+              <Obj RefId="9">
+                <MS>
+                  <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188550600</I32>
+                </MS>
+              </Obj>
+              <Obj RefId="10">
+                <MS>
+                  <S N="ClassName">ServerComponent_Hyper_V_PowerShell</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188418520</I32>
+                  <S N="MiXml">&lt;CLASS NAME="ServerComponent_Hyper_V_PowerShell" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;1.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;Hyper-V-PowerShell&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                </MS>
+              </Obj>
+            </LST>
+          </Obj>
+        </MS>
+      </Obj>
+      <Obj RefId="11">
+        <TN RefId="5">
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/ServerComponent_Hyper_V_Tools</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ServerComponent_Hyper_V_Tools</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>ServerComponent_Hyper_V_Tools</ToString>
+        <Props>
+          <S N="PSComputerName">vmhv19a</S>
+        </Props>
+        <MS>
+          <I32 N="NumericId">301</I32>
+          <Obj N="__ClassMetadata" RefId="12">
+            <TNRef RefId="3" />
+            <LST>
+              <Obj RefId="13">
+                <MS>
+                  <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188550600</I32>
+                </MS>
+              </Obj>
+              <Obj RefId="14">
+                <MS>
+                  <S N="ClassName">ServerComponent_Hyper_V_Tools</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188415400</I32>
+                  <S N="MiXml">&lt;CLASS NAME="ServerComponent_Hyper_V_Tools" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;1.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;Hyper-V-Tools&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                </MS>
+              </Obj>
+            </LST>
+          </Obj>
+        </MS>
+      </Obj>
+      <Obj RefId="15">
+        <TN RefId="6">
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/ServerComponent_RSAT</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ServerComponent_RSAT</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>ServerComponent_RSAT</ToString>
+        <Props>
+          <S N="PSComputerName">vmhv19a</S>
+        </Props>
+        <MS>
+          <I32 N="NumericId">67</I32>
+          <Obj N="__ClassMetadata" RefId="16">
+            <TNRef RefId="3" />
+            <LST>
+              <Obj RefId="17">
+                <MS>
+                  <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188550600</I32>
+                </MS>
+              </Obj>
+              <Obj RefId="18">
+                <MS>
+                  <S N="ClassName">ServerComponent_RSAT</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1192156728</I32>
+                  <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;8.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                </MS>
+              </Obj>
+            </LST>
+          </Obj>
+        </MS>
+      </Obj>
+      <Obj RefId="19">
+        <TN RefId="7">
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/ServerComponent_RSAT_Hyper_V_Tools</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ServerComponent_RSAT_Hyper_V_Tools</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>ServerComponent_RSAT_Hyper_V_Tools</ToString>
+        <Props>
+          <S N="PSComputerName">vmhv19a</S>
+        </Props>
+        <MS>
+          <I32 N="NumericId">464</I32>
+          <Obj N="__ClassMetadata" RefId="20">
+            <TNRef RefId="3" />
+            <LST>
+              <Obj RefId="21">
+                <MS>
+                  <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188550600</I32>
+                </MS>
+              </Obj>
+              <Obj RefId="22">
+                <MS>
+                  <S N="ClassName">ServerComponent_RSAT_Hyper_V_Tools</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1192055272</I32>
+                  <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_Hyper_V_Tools" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;0.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-Hyper-V-Tools&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                </MS>
+              </Obj>
+            </LST>
+          </Obj>
+        </MS>
+      </Obj>
+      <Obj RefId="23">
+        <TN RefId="8">
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/ServerComponent_RSAT_Role_Tools</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/ServerManager/MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#ServerComponent_RSAT_Role_Tools</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_ServerManagerServerComponentDescriptor</T>
+          <T>Microsoft.Management.Infrastructure.CimInstance</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>ServerComponent_RSAT_Role_Tools</ToString>
+        <Props>
+          <S N="PSComputerName">vmhv19a</S>
+        </Props>
+        <MS>
+          <I32 N="NumericId">256</I32>
+          <Obj N="__ClassMetadata" RefId="24">
+            <TNRef RefId="3" />
+            <LST>
+              <Obj RefId="25">
+                <MS>
+                  <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1188550600</I32>
+                </MS>
+              </Obj>
+              <Obj RefId="26">
+                <MS>
+                  <S N="ClassName">ServerComponent_RSAT_Role_Tools</S>
+                  <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
+                  <S N="ServerName">vmhv19a</S>
+                  <I32 N="Hash">-1192035512</I32>
+                  <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_Role_Tools" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;8.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-Role-Tools&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                </MS>
+              </Obj>
+            </LST>
+          </Obj>
+        </MS>
+      </Obj>
+    </LST>
+  </Obj>
+</Objs>

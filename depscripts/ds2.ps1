@@ -199,21 +199,41 @@ else{
 
 Write-Output    "===================================  On progress  ====================================" 
 
-$check = Get-AzPublicIpAddress -Name 'pipfw01' -ErrorAction SilentlyContinue
+$check = Get-AzPublicIpAddress -Name 'pipfw01pbl' -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscfw01.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipStd.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipStdFw01Pbl.json"
 	  
 }
 
 else{
 
-    Write-Host "pipfw01 already exist"
+    Write-Host "pipfw01pbl already exist"
+
+}
+
+Write-Output    "===================================  On progress  ====================================" 
+
+$check = Get-AzPublicIpAddress -Name 'pipfw01mgt' -ErrorAction SilentlyContinue
+
+if($check -eq $null){
+
+	New-AzResourceGroupDeployment `
+	  -Name remoteTemplateDeployment `
+	  -ResourceGroupName $rg `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipStd.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipStdFw01Mgt.json"
+	  
+}
+
+else{
+
+    Write-Host "pipfw01mgt already exist"
 
 }
 
