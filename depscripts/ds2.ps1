@@ -197,6 +197,26 @@ else{
 
 }
 
+Write-Output    "===================================  On progress  ====================================" 
+
+$check = Get-AzPublicIpAddress -Name 'pipfw01' -ErrorAction SilentlyContinue
+
+if($check -eq $null){
+
+	New-AzResourceGroupDeployment `
+	  -Name remoteTemplateDeployment `
+	  -ResourceGroupName $rg `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscfw01.json"
+	  
+}
+
+else{
+
+    Write-Host "pipfw01 already exist"
+
+}
+
 Write-Output `n "======================================================================================" 
 Write-Output    "==============================  Creating VNetIntface  ================================" 
 Write-Output    "======================================================================================" `n
@@ -366,108 +386,6 @@ New-AzResourceGroupDeployment `
 else{
 
     Write-Host "NSG: $nsgpvt already exist"
-
-}
-
-Write-Output `n "======================================================================================" 
-Write-Output    "===============================  Creating PublicIPAdd ================================" 
-Write-Output    "======================================================================================" `n
-
-$check = Get-AzPublicIpAddress -Name 'pipws10a' -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscWs10a.json"
-	  
-}
-
-else{
-
-    Write-Host "pipws10a already exist"
-
-}
-
-Write-Output    "===================================  On progress  ====================================" 
-
-$check = Get-AzPublicIpAddress -Name 'pipad19a' -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscAd19a.json"
-	  
-}
-
-else{
-
-    Write-Host "pipad19a already exist"
-
-}
-
-Write-Output    "===================================  On progress  ====================================" 
-
-$check = Get-AzPublicIpAddress -Name 'pipex19a' -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscEx19a.json"
-	  
-}
-
-else{
-
-    Write-Host "pipex19a already exist"
-
-}
-
-Write-Output    "===================================  On progress  ====================================" 
-
-$check = Get-AzPublicIpAddress -Name 'piphv19a' -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscHv19a.json"
-	  
-}
-
-else{
-
-    Write-Host "piphv19a already exist"
-
-}
-
-Write-Output    "===================================  On progress  ====================================" 
-
-$check = Get-AzPublicIpAddress -Name 'pipfw01' -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/pipBscfw01.json"
-	  
-}
-
-else{
-
-    Write-Host "pipfw01 already exist"
 
 }
 

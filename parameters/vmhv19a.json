@@ -12,7 +12,7 @@
             "value": false
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/fdd345f9-103a-4dcf-8685-4bde04046f0c/resourceGroups/minilico/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
         },
         "subnetName": {
             "value": "vnetPbl"
@@ -21,10 +21,10 @@
             "value" : "10.0.0.13"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/fdd345f9-103a-4dcf-8685-4bde04046f0c/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/fdd345f9-103a-4dcf-8685-4bde04046f0c/resourceGroups/minilico/providers/Microsoft.Network/publicIPAddresses/piphv19a"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/publicIPAddresses/piphv19a"
         },
         "pipDeleteOption": {
             "value": "Delete"
