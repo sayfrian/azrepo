@@ -5,7 +5,7 @@ $ruleport = 3389
 $getownip = (Invoke-WebRequest -uri "https://ipinfo.io/ip").Content
 
 
-function AddOrUpdateRDPRecord {
+function AddOrUpdateRDPRecord {lllll
     Process {
         $nsg = Get-AzNetworkSecurityGroup -Name $_
         $ruleexists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains($rulename);
