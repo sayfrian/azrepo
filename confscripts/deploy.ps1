@@ -5,38 +5,6 @@ Write-Output    "===============================================================
 netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol="icmpv4:8,any" dir=in action=allow
 
 Write-Output `n "======================================================================================" 
-Write-Output    "===============================  Set IPv4  to Static  ================================" 
-Write-Output    "======================================================================================" `n
-
-$IP = "10.0.0.11"
-$MaskBits = 24 # This means subnet mask = 255.255.255.0
-$Gateway = "10.0.0.1"
-$Dns = @('10.0.0.11','8.8.8.8')
-$IPType = "IPv4"
-
-# Retrieve the network adapter that you want to configure
-$adapter = Get-NetAdapter | ? {$_.Status -eq "up"}
-
-# Remove any existing IPgateway from our ipv4 adapter
-If (($adapter | Get-NetIPConfiguration).IPv4Address.IPAddress) {
- $adapter | Remove-NetIPAddress -AddressFamily $IPType -Confirm:$false
-}
-
-If (($adapter | Get-NetIPConfiguration).Ipv4DefaultGateway) {
- $adapter | Remove-NetRoute -AddressFamily $IPType -Confirm:$false
-}
-
-# Configure the IP address and default gateway
-$adapter | New-NetIPAddress `
- -AddressFamily $IPType `
- -IPAddress $IP `
- -PrefixLength $MaskBits `
- -DefaultGateway $Gateway
-
-# Configure the DNS client server IP addresses
-$adapter | Set-DnsClientServerAddress -ServerAddresses $DNS
-
-Write-Output `n "======================================================================================" 
 Write-Output    "===============================  Disable  IPv6 VMAD01 ================================" 
 Write-Output    "======================================================================================" `n
 
@@ -92,41 +60,4 @@ Write-Output    "=================================== Skip this first ===========
 
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Install-Module ADDSDeployment
-
-Write-Output    "========================= If these failed, include above ============================="
-
 Import-Module ADDSDeployment
-$passAd = ConvertTo-SecureString "Jakarta@2022" -AsPlainText -Force
-Install-ADDSForest `
--CreateDnsDelegation:$false `
--DatabasePath "C:\AD\DBNTDS" `
--DomainMode "WinThreshold" `
--DomainName "minilico.xyz" `
--DomainNetbiosName "AD" `
--ForestMode "WinThreshold" `
--InstallDns:$true `
--LogPath "C:\AD\LOGNTDS" `
--NoRebootOnCompletion:$false `
--SysvolPath "C:\AD\SYSVOL" `
--Force:$true `
--SafeModeAdministratorPassword $passAd
-
-Write-Output `n "======================================================================================" 
-Write-Output    "==========================  Change DNS from loop to itself  ==========================" 
-Write-Output    "======================================================================================" `n
-
-$Dns = @('10.0.0.11','8.8.8.8')
-$adapter = Get-NetAdapter -Name "ethernet"
-$adapter | Set-DnsClientServerAddress -ServerAddresses $Dns
-
-Write-Output `n "======================================================================================" 
-Write-Output    "=========================  Add Reverse Lookup Zone on DNS  ===========================" 
-Write-Output    "======================================================================================" `n
-
-Get-DnsServerZone
-Add-DnsServerPrimaryZone -NetworkID "10.0.0.0/24" -ReplicationScope "Domain"
-Get-DnsServerZone
-
-Write-Output `n "======================================================================================" 
-Write-Output    "=========================  COMPLETE | COMPLETE | COMPLETE  ===========================" 
-Write-Output    "======================================================================================" `n
