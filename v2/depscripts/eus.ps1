@@ -70,7 +70,7 @@ Write-Output    "===================================  On progress  =============
 
 $nsg = 'eus-nsgPvt'
 
-$check = Get-AzNetworkSecurityGroup -Name $nsgpvt -ErrorAction SilentlyContinue
+$check = Get-AzNetworkSecurityGroup -Name $nsg -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 
