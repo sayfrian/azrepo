@@ -1,41 +1,19 @@
-$pip = 'eus-pipvpna'
+$vpn = 'eus-vpn'
 
-$check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$pip.json"
-	  
-}
-
-else{
-
-    Write-Host " $pip already exist"
-
-}
-
-Write-Output    "===================================  On progress  ===================================="
-
-$pip = 'eus-pipvpnb'
-
-$check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
+$check = Get-AzPublicIpAddress -Name $vpn -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$pip.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vpn-act-nobgp.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vpn.json"
 	  
 }
 
 else{
 
-    Write-Host " $pip already exist"
+    Write-Host " $vpn already exist"
 
 }

@@ -56,7 +56,7 @@
             "type": "Microsoft.Network/virtualNetworkGateways",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "Microsoft.Network/virtualNetworks/eus-vnet/subnets/GatewaySubnet"
+                "Microsoft.Network/virtualNetworks/eus-vnet/subnets/eus-vpn"
             ],
             "tags": {},
             "properties": {
