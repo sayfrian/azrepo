@@ -92,28 +92,6 @@ Write-Output `n "===============================================================
 Write-Output    "===============================  Creating PublicIPAdd ================================" 
 Write-Output    "======================================================================================" `n 
 
-$pip = 'eus-pipad19a'
-
-$check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
-
-if($check -eq $null){
-
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$pip.json"
-	  
-}
-
-else{
-
-    Write-Host " $pip already exist"
-
-}
-
-Write-Output    "===================================  On progress  ===================================="
-
 $pip = 'eus-pipws10a'
 
 $check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
@@ -238,7 +216,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vnic-ip4.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vnicad19a.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vnic.json"
 	  
 }
 
@@ -260,7 +238,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vnic-ip4.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vnicws10a.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vnic.json"
 	  
 }
 
@@ -282,7 +260,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vnic-ip4.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vnicws10b.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vnic.json"
 	  
 }
 
@@ -305,7 +283,7 @@ if($check -eq $null){
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vm-pip-nodisk-wsext.json" `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/templates/vm-nopip-nodisk-ps.json" `
 	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/parameters/eus-vmad19a.json"
 	  
 }

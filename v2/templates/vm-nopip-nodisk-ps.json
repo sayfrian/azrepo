@@ -78,9 +78,12 @@
         "autoShutdownTimeZone": {
             "type": "string"
         },
-        "autoShutdownNotificationStatus": {
-            "type": "string"
-        }
+		"scripturi": {
+			"type": "string"
+		},
+		"scriptfilename": {
+			"type": "string"
+		}
     },
     "variables": {
         "nsgId": "[parameters('networkSecurityGroupId')]",
@@ -139,7 +142,7 @@
                         "offer": "[parameters('imageOffer')]",
                         "sku": "[parameters('imageSku')]",
                         "version": "[parameters('imageVersion')]"
-                    }
+                    },
                 },
                 "networkProfile": {
                     "networkInterfaces": [
@@ -154,42 +157,9 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachineComputerName')]",
                     "adminUsername": "[parameters('adminUsername')]",
-                    "adminPassword": "[parameters('adminPassword')]",
-                    "windowsConfiguration": {
-                        "enableAutomaticUpdates": false,
-                        "provisionVmAgent": true,
-                        "patchSettings": {
-                            "enableHotpatching": "[parameters('enableHotpatching')]",
-                            "patchMode": "[parameters('patchMode')]"
-                        }
-                    }
+                    "adminPassword": "[parameters('adminPassword')]"
                 }
             }
-        },
-		{
-            "name": "Microsoft.CustomScriptExtension",
-            "apiVersion": "2015-01-01",
-            "type": "Microsoft.Resources/deployments",
-            "properties": {
-                "mode": "incremental",
-                "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/sayfuladrian/azure/feature/elbrm/vmad01-ext1.json"
-                },
-                "parameters": {
-                    "fileUris": {
-                        "value": "https://raw.githubusercontent.com/sayfuladrian/azure/main/elbrm/confad01.ps1"
-                    },
-                    "vmName": {
-                        "value": "[parameters('virtualMachineName')]"
-                    },
-                    "location": {
-                        "value": "eastus"
-                    }
-                }
-            },
-            "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-            ]
         },
         {
             "name": "[concat('shutdown-computevm-', parameters('virtualMachineName'))]",
@@ -206,12 +176,30 @@
                     "time": "[parameters('autoShutdownTime')]"
                 },
                 "timeZoneId": "[parameters('autoShutdownTimeZone')]",
-                "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachineName'))]",
-                "notificationSettings": {
-                    "status": "[parameters('autoShutdownNotificationStatus')]",
-                }
+                "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachineName'))]"
             }
-        }
+        },
+		{
+		  "type": "Microsoft.Compute/virtualMachines/extensions",
+		  "apiVersion": "2021-04-01",
+		  "name": "[concat(variables('vmName'),'/', 'parameters('scriptfilename'))]",
+		  "location": "[parameters('location')]",
+		  "dependsOn": [
+			"[concat('Microsoft.Compute/virtualMachines/',variables('vmName'))]"
+		  ],
+		  "properties": {
+			"publisher": "Microsoft.Compute",
+			"type": "CustomScriptExtension",
+			"typeHandlerVersion": "1.7",
+			"autoUpgradeMinorVersion": true,
+			"settings": {
+			  "fileUris": [
+				"[concat(parameters('scripturi'), parameters('scriptfilename'))]"
+			  ],
+			  "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File ', parameters('scriptfilename'))]"
+			}
+		  }
+		}
     ],
     "outputs": {
         "adminUsername": {
