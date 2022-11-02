@@ -26,13 +26,13 @@
             "value": 1
         },
         "subnet0_name": {
-            "value": "eus-vnetPbl"
+            "value": "eus-vnetpbl"
         },
         "subnet0_addressRange": {
             "value": "10.0.0.0/24"
         },
         "subnet1_name": {
-            "value": "eus-vnetPvt"
+            "value": "eus-vnetpvt"
         },
         "subnet1_addressRange": {
             "value": "10.0.1.0/24"

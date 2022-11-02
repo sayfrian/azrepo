@@ -12,7 +12,7 @@
             "value": "Basic"
         },
         "name": {
-            "value": "pipeusad19a"
+            "value": "eus-pipad19a"
         },
         "publicIPAllocationMethod": {
             "value": "Dynamic"
@@ -24,7 +24,7 @@
             "value": "IPv4"
         },
         "domainNameLabel": {
-            "value": "pipeusad19a"
+            "value": "eus-pipad19a"
         }
     }
 }
