@@ -24,7 +24,7 @@
             "value": "eus-vnet"
         },
         "newSubnetName": {
-            "value": "eus-vpn"
+            "value": "GatewaySubnet"
         },
         "subnetAddressPrefix": {
             "value": "10.0.2.0/24"
