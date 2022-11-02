@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "extendedLocation": {
+            "type": "object"
+        },
+        "sku": {
+            "type": "string",
+			"defaultValues": "Basic",
+            "allowedValues": [
+                "Basic"
+            ]
+        },
+        "publicIPAllocationMethod": {
+            "type": "string",
+			"defaultValues": "Dynamic",
+            "allowedValues": [
+                "Dynamic",
+                "Static"
+            ]
+        },
+        "idleTimeoutInMinutes": {
+            "type": "int"
+        },
+        "domainNameLabel": {
+            "type": "string"
+        },
+        "publicIpAddressVersion": {
+            "type": "string"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2020-08-01",
+            "type": "Microsoft.Network/publicIPAddresses",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "extendedLocation": "[if(empty(parameters('extendedLocation')), json('null'), parameters('extendedLocation'))]",
+            "sku": {
+                "name": "[parameters('sku')]"
+            },
+            "properties": {
+                "publicIPAllocationMethod": "[parameters('publicIPAllocationMethod')]",
+                "idleTimeoutInMinutes": "[parameters('idleTimeoutInMinutes')]",
+                "publicIpAddressVersion": "[parameters('publicIpAddressVersion')]",
+                "dnsSettings": {
+                    "domainNameLabel": "[parameters('domainNameLabel')]"
+                },
+                "ipTags": []
+            }
+        }
+    ]
+}

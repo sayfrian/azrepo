@@ -1,0 +1,87 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "vnicad19a"
+        },
+        "enableAcceleratedNetworking": {
+            "value": false
+        },
+        "networkSecurityGroupId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
+        },
+        "subnetName": {
+            "value": "vnetPbl"
+        },
+        "privateIPAddress": {
+            "value" : "10.0.0.11"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico"
+        },
+        "publicIpAddressId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/publicIPAddresses/pipad19a"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineName": {
+            "value": "vmad19a"
+        },
+        "virtualMachineComputerName": {
+            "value": "vmad19a"
+        },
+        "virtualMachineRG": {
+            "value": "minilico"
+        },
+        "imagePublisher": {
+            "value": "MicrosoftWindowsServer"
+        },
+        "imageOffer": {
+            "value": "Canonical"
+        },
+        "imageSku": {
+            "value": "2019-datacenter-gensecond"
+        },
+        "imageVersion": {
+            "value": "latest"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2ms"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "adminUsername": {
+            "value": "rian"
+        },
+        "adminPassword": {
+            "value": "Jakarta@2022"
+        },
+        "patchMode": {
+            "value": "Manual"
+        },
+        "enableHotpatching": {
+            "value": false
+        },
+        "autoShutdownStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownTime": {
+            "value": "19:00"
+        },
+        "autoShutdownTimeZone": {
+            "value": "SE Asia Standard Time"
+        }
+    }
+}

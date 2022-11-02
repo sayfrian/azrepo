@@ -1,0 +1,74 @@
+{
+  "id": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Resources/deployments/Microsoft.VirtualNetworkGateway-20221101141858",
+  "name": "Microsoft.VirtualNetworkGateway-20221101141858",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworkGateways/vpn",
+    "marketplaceItemId": "Microsoft.VirtualNetworkGateway"
+  },
+  "properties": {
+    "templateHash": "6350512495248621040",
+    "parameters": {
+      "name": {
+        "type": "String",
+        "value": "vpn"
+      },
+      "location": {
+        "type": "String",
+        "value": "eastus"
+      },
+      "gatewayType": {
+        "type": "String",
+        "value": "Vpn"
+      },
+      "sku": {
+        "type": "String",
+        "value": "VpnGw1"
+      },
+      "vpnGatewayGeneration": {
+        "type": "String",
+        "value": "Generation1"
+      },
+      "vpnType": {
+        "type": "String",
+        "value": "RouteBased"
+      },
+      "subnetId": {
+        "type": "String",
+        "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico/subnets/GatewaySubnet"
+      },
+      "publicIpAddressId": {
+        "type": "String",
+        "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/publicIPAddresses/vpn-ip"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Succeeded",
+    "timestamp": "2022-11-01T07:51:27.9224943Z",
+    "duration": "PT31M4.6691803S",
+    "correlationId": "0ca3aefb-7a9d-4661-a5a2-cd0e4047077b",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualNetworkGateways",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [],
+    "outputResources": [
+      {
+        "id": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworkGateways/vpn"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}
