@@ -46,7 +46,7 @@ Write-Output `n "===============================================================
 Write-Output    "==================================   Creating NSG   ==================================" 
 Write-Output    "======================================================================================" `n
 
-$nsg = 'eus-nsgPbl'
+$nsg = 'eus-nsgpbl'
 
 $check = Get-AzNetworkSecurityGroup -Name $nsg -ErrorAction SilentlyContinue
 
@@ -62,13 +62,13 @@ New-AzResourceGroupDeployment `
 
 else{
 
-    Write-Host "NSG: $nsgPbl already exist"
+    Write-Host "NSG: $nsg already exist"
 
 }
 
 Write-Output    "===================================  On progress  ====================================" 
 
-$nsg = 'eus-nsgPvt'
+$nsg = 'eus-nsgpvt'
 
 $check = Get-AzNetworkSecurityGroup -Name $nsg -ErrorAction SilentlyContinue
 
