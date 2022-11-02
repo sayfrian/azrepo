@@ -1,19 +1,35 @@
-$nsg = 'eus-nsgPbl'
+$rg = "eus-rg"
+$loc = "eastus"
 
-$check = Get-AzNetworkSecurityGroup -Name $nsg -ErrorAction SilentlyContinue
+$check = Get-AzResourceGroup -Name $rg -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 
-New-AzResourceGroupDeployment `
-  -Name remoteTemplateDeployment `
-  -ResourceGroupName $rg `
-  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/nsg.json" `
-  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-nsgPbl.json"
-  
+    New-AzResourceGroup -Name $rg -Location $loc
+	
+}
+else{
+
+    Write-Host "RESOURCEGROUP: $rg already exist"
+	
+}
+
+
+
+$vnet = "eus-vnet"
+
+$check = Get-AzVirtualNetwork -Name $vnet -ErrorAction SilentlyContinue
+
+if($check -eq $null){
+	New-AzResourceGroupDeployment `
+	  -Name remoteTemplateDeployment `
+	  -ResourceGroupName $rg `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vn-2sub.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vnet.json"
 }
 
 else{
 
-    Write-Host "NSG: $nsgPbl already exist"
+    Write-Host "VIRTUALNETWORK $vnet already exist"
 
 }
