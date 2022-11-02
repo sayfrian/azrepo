@@ -6,13 +6,13 @@
             "value": "eastus"
         },
         "networkInterfaceName": {
-            "value": "vnicad19a"
+            "value": "eus-vnicad19a"
         },
         "enableAcceleratedNetworking": {
             "value": false
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/networkSecurityGroups/eus-nsgPbl"
         },
         "subnetName": {
             "value": "vnetPbl"
@@ -21,22 +21,22 @@
             "value" : "10.0.0.11"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/virtualNetworks/eus-vnet"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/publicIPAddresses/pipad19a"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/publicIPAddresses/eus-pipad19a"
         },
         "pipDeleteOption": {
             "value": "Delete"
         },
         "virtualMachineName": {
-            "value": "vmad19a"
+            "value": "eus-vmad19a"
         },
         "virtualMachineComputerName": {
-            "value": "vmad19a"
+            "value": "eus-vmad19a"
         },
         "virtualMachineRG": {
-            "value": "minilico"
+            "value": "eus"
         },
         "imagePublisher": {
             "value": "MicrosoftWindowsServer"
@@ -57,7 +57,7 @@
             "value": "Delete"
         },
         "virtualMachineSize": {
-            "value": "Standard_B2ms"
+            "value": "Standard_D4s_v3"
         },
         "nicDeleteOption": {
             "value": "Delete"
@@ -82,6 +82,12 @@
         },
         "autoShutdownTimeZone": {
             "value": "SE Asia Standard Time"
-        }
+        },
+		"scripturi": {
+			"value" : ""
+		},
+		"scriptfilename": {
+			"value" : ""
+		}
     }
 }

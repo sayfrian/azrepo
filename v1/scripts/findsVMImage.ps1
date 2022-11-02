@@ -21,6 +21,29 @@ Get-AzVMImage -location $loc -Publisher $pub -Offer $off -Sku $sku
 <#=======================================================#>
 <#=======================================================#>
 
+#Example: Windows Server 2019
+
+$loc = 'eastus'
+$pub = 'MicrosoftWindowsServer'
+$off = 'WindowsServer'
+$sku = 'win10-21h2-pro'
+
+#To get the publisher list
+Get-AzVMImagePublisher -location $loc
+
+#To get the offer list
+Get-AzVMImageOffer -location $loc -Publisher $pub
+
+#To get the sku list
+Get-AzVMImageSku -location $loc -Publisher $pub -Offer $off
+
+#To get the available image version
+Get-AzVMImage -location $loc -Publisher $pub -Offer $off -Sku $sku
+
+<#=======================================================#>
+<#=======================================================#>
+<#=======================================================#>
+
 #Example: Windows 11
 
 $loc = 'eastus'

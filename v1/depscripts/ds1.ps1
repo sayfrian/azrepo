@@ -2,8 +2,8 @@ $rg = "minilico"
 $loc = "eastus"
 
 $vnet = "vnetminilico"
-$nsgpbl = "nsgpbl"
-$nsgpvt = "nsgpvt"
+$nsgpbl = "nsgPbl"
+$nsgpvt = "nsgPvt"
 
 Write-Output `n "================================ ENVIRONMENT CREATION ================================"
 

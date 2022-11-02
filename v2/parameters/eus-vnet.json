@@ -9,10 +9,10 @@
             "value": {}
         },
         "virtualNetworkName": {
-            "value": "vnetminilico"
+            "value": "eus-vnet"
         },
         "resourceGroup": {
-            "value": "minilico"
+            "value": "eus"
         },
         "addressSpaces": {
             "value": [
@@ -26,10 +26,16 @@
             "value": 1
         },
         "subnet0_name": {
-            "value": "vnetPbl"
+            "value": "eus-vnetPbl"
         },
         "subnet0_addressRange": {
             "value": "10.0.0.0/24"
+        },
+        "subnet1_name": {
+            "value": "eus-vnetPvt"
+        },
+        "subnet1_addressRange": {
+            "value": "10.0.1.0/24"
         },
         "ddosProtectionPlanEnabled": {
             "value": false

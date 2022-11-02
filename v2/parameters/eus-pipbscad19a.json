@@ -9,13 +9,13 @@
             "value": {}
         },
         "sku": {
-            "value": "Standard"
+            "value": "Basic"
         },
         "name": {
-            "value": "pipfw01mgt"
+            "value": "pipeusad19a"
         },
         "publicIPAllocationMethod": {
-            "value": "Static"
+            "value": "Dynamic"
         },
         "idleTimeoutInMinutes": {
             "value": 4
@@ -24,10 +24,7 @@
             "value": "IPv4"
         },
         "domainNameLabel": {
-            "value": "pipfw01mgt"
-        },
-		"tier": {
-			"value": "Regional"
-		}
+            "value": "pipeusad19a"
+        }
     }
 }

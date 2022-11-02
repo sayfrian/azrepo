@@ -12,7 +12,7 @@
             "value": "Basic"
         },
         "name": {
-            "value": "piphv19a"
+            "value": "pipeusws10b"
         },
         "publicIPAllocationMethod": {
             "value": "Dynamic"
@@ -24,7 +24,7 @@
             "value": "IPv4"
         },
         "domainNameLabel": {
-            "value": "piphv19a"
+            "value": "pipeusws10b"
         }
     }
 }

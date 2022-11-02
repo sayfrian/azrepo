@@ -3,22 +3,22 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "networkInterfaceName": {
-            "value": "vnicws10a"
+            "value": "vniceusad19a"
         },
         "location": {
             "value": "eastus"
         },
         "subnetId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico/subnets/vnetPbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/virtualNetworks/eus-vnet/subnets/vnetPbl"
         },
         "privateIPAllocationMethod": {
             "value": "Static"
         },
         "privateIPv4Address": {
-            "value": "10.0.0.224"
+            "value": "10.0.0.221"
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
         }
     }
 }
