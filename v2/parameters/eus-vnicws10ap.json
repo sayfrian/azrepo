@@ -15,7 +15,7 @@
             "value": "Static"
         },
         "privateIPv4Address": {
-            "value": "10.0.1.221"
+            "value": "10.0.0.221"
         },
         "networkSecurityGroupId": {
             "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/eus-nsgpbl"
