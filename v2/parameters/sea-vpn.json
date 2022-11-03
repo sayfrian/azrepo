@@ -6,7 +6,7 @@
 			"value": "sea-rg"
 		},
 		"gatewaysubnet": {
-			"value": "Microsoft.Network/virtualNetworks/eus-vnet/subnets/GatewaySubnet"
+			"value": "Microsoft.Network/virtualNetworks/sea-vnet/subnets/GatewaySubnet"
 		},
         "location": {
             "value": "southeastasia"
