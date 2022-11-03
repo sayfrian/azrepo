@@ -184,7 +184,6 @@
 		  "apiVersion": "2021-04-01",
 		  "name": "[concat(parameters('virtualMachineName'),'/',parameters('scriptfilename'))]",
 		  "location": "[parameters('location')]",
-		  "vmName": "[parameters('virtualMachineName')]",
 		  "properties": {
 			"publisher": "Microsoft.Compute",
 			"type": "CustomScriptExtension",
@@ -198,7 +197,7 @@
 			}
 		  },
 		  "dependsOn": [
-			"[concat('Microsoft.Compute/virtualMachines/',variables('vmName'))]"
+			"[concat('Microsoft.Compute/virtualMachines/',variables('virtualMachineName'))]"
 		  ]
 		}
     ],
