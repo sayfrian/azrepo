@@ -78,10 +78,10 @@
             "value": "SE Asia Standard Time"
         },
 		"scripturi": {
-			"value" : ""
+			"value" : "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/confscripts/"
 		},
 		"scriptfilename": {
-			"value" : ""
+			"value" : "eus-ad19aconf.ps1"
 		}
     }
 }

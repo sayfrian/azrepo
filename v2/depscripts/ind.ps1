@@ -1,19 +1,19 @@
-$vpn = 'eus-vpn'
+$vm = 'eus-vmad19a'
 
-$check = Get-AzPublicIpAddress -Name $vpn -ErrorAction SilentlyContinue
+$check = Get-AzVM -Name $vm -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vpn-act-nobgp.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vpn.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vm-nopip-nodisk-ps.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vmad19a.json"
 	  
 }
 
 else{
 
-    Write-Host " $vpn already exist"
+    Write-Host "$vm already exist"
 
 }

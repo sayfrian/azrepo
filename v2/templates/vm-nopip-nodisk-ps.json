@@ -182,11 +182,9 @@
 		{
 		  "type": "Microsoft.Compute/virtualMachines/extensions",
 		  "apiVersion": "2021-04-01",
-		  "name": "[concat(variables('vmName'),'/', 'parameters('scriptfilename'))]",
+		  "name": "[concat(variables('vmName'),'/','parameters('scriptfilename'))]",
 		  "location": "[parameters('location')]",
-		  "dependsOn": [
-			"[concat('Microsoft.Compute/virtualMachines/',variables('vmName'))]"
-		  ],
+		  "vmName": "[parameters('virtualMachineName')]",
 		  "properties": {
 			"publisher": "Microsoft.Compute",
 			"type": "CustomScriptExtension",
@@ -198,7 +196,10 @@
 			  ],
 			  "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File ', parameters('scriptfilename'))]"
 			}
-		  }
+		  },
+		  "dependsOn": [
+			"[concat('Microsoft.Compute/virtualMachines/',variables('vmName'))]"
+		  ]
 		}
     ],
     "outputs": {
