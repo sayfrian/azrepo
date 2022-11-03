@@ -15,7 +15,9 @@
             "value": "sea"
         },
         "addressSpaces": {
-            "value": "11.0.0.0/16"
+            "value": [
+                "11.0.0.0/16"
+            ]
         },
         "ipv6Enabled": {
             "value": false
