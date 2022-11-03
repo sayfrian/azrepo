@@ -15,7 +15,7 @@
             "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
         },
         "subnetName": {
-            "value": "vnetPbl"
+            "value": "eus-vnetpbl"
         },
         "privateIPAddress": {
             "value" : "10.0.1.11"

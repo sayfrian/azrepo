@@ -9,7 +9,7 @@
             "value": "eastus"
         },
         "subnetId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet/subnets/eus-vnetpbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet/subnets/eus-eus-vnetpbl"
         },
         "privateIPAllocationMethod": {
             "value": "Static"
