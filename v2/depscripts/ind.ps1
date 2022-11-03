@@ -1,3 +1,5 @@
+Write-Output    "===================================  On progress  ====================================" 
+
 $vnic = 'eus-vnicws10a'
 
 $check = Get-AzNetworkInterface -Name $vnic -ErrorAction SilentlyContinue
