@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "name": {
+            "value": "eus-vpn"
+        },
+        "gatewayType": {
+            "value": "Vpn"
+        },
+        "sku": {
+            "value": "VpnGw1"
+        },
+        "vpnType": {
+            "value": "RouteBased"
+        },
+        "vpnGatewayGeneration": {
+            "value": "Generation1"
+        },
+        "existingVirtualNetworkName": {
+            "value": "eus-vnet"
+        },
+        "newSubnetName": {
+            "value": "GatewaySubnet"
+        },
+        "subnetAddressPrefix": {
+            "value": "10.0.2.0/24"
+        },
+        "publicIpAddressId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipvpna"
+        },
+        "activeActive": {
+            "value": true
+        },
+        "activeActiveGatewayPublicIpAddressId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipvpnb"
+        }
+    }
+}

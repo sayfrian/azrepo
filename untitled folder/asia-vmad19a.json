@@ -1,0 +1,87 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "eus-vnicad19a"
+        },
+        "enableAcceleratedNetworking": {
+            "value": false
+        },
+        "networkSecurityGroupId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/eus-nsgpvt"
+        },
+        "subnetName": {
+            "value": "eus-vnetpvt"
+        },
+        "privateIPAddress": {
+            "value" : "10.0.1.11"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet"
+        },
+        "virtualMachineName": {
+            "value": "eus-vmad19a"
+        },
+        "virtualMachineComputerName": {
+            "value": "eus-vmad19a"
+        },
+        "virtualMachineRG": {
+            "value": "eus"
+        },
+        "imagePublisher": {
+            "value": "MicrosoftWindowsServer"
+        },
+        "imageOffer": {
+            "value": "WindowsServer"
+        },
+        "imageSku": {
+            "value": "2019-datacenter-gensecond"
+        },
+        "imageVersion": {
+            "value": "latest"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D4s_v3"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "adminUsername": {
+            "value": "rian"
+        },
+        "adminPassword": {
+            "value": "Jakarta@2022"
+        },
+        "patchMode": {
+            "value": "Manual"
+        },
+        "enableHotpatching": {
+            "value": false
+        },
+        "autoShutdownStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownTime": {
+            "value": "19:00"
+        },
+        "autoShutdownTimeZone": {
+            "value": "SE Asia Standard Time"
+        },
+		"scripturi": {
+			"value" : "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/confscripts/"
+		},
+		"scriptfilename": {
+			"value" : "eus-ad19aconf.ps1"
+		}
+    }
+}
