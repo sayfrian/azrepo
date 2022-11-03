@@ -1,17 +1,19 @@
-$vnet = "eus-vnet"
+$vnic = 'eus-vnicws10a'
 
-$check = Get-AzVirtualNetwork -Name $vnet -ErrorAction SilentlyContinue
+$check = Get-AzNetworkInterface -Name $vnic -ErrorAction SilentlyContinue
 
 if($check -eq $null){
+
 	New-AzResourceGroupDeployment `
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vn-2sub.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vnet.json"
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vnic-ip4.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vnic.json"
+	  
 }
 
 else{
 
-    Write-Host "VIRTUALNETWORK $vnet already exist"
+    Write-Host "$vnic already exist"
 
 }
