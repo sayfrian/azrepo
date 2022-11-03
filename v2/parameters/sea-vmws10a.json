@@ -3,43 +3,49 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus"
+            "value": "southeastasia"
         },
         "networkInterfaceName": {
-            "value": "eus-vnicad19a"
+            "value": "vnicws10a"
         },
         "enableAcceleratedNetworking": {
             "value": false
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/eus-nsgpvt"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/networkSecurityGroups/sea-nsgpbl"
         },
         "subnetName": {
-            "value": "eus-vnetpvt"
+            "value": "sea-vnetpbl"
         },
         "privateIPAddress": {
-            "value" : "10.0.1.11"
+            "value" : "11.0.0.11"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/virtualNetworks/sea-vnet"
+        },
+        "publicIpAddressId": {
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/publicIPAddresses/sea-pipws10a"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
         },
         "virtualMachineName": {
-            "value": "eus-vmad19a"
+            "value": "sea-vmws10a"
         },
         "virtualMachineComputerName": {
-            "value": "eus-vmad19a"
+            "value": "sea-vmws10a"
         },
         "virtualMachineRG": {
-            "value": "eus"
+            "value": "sea-rg"
         },
         "imagePublisher": {
-            "value": "MicrosoftWindowsServer"
+            "value": "MicrosoftWindowsDesktop"
         },
         "imageOffer": {
-            "value": "WindowsServer"
+            "value": "Windows-10"
         },
         "imageSku": {
-            "value": "2019-datacenter-gensecond"
+            "value": "win10-21h2-pro"
         },
         "imageVersion": {
             "value": "latest"
@@ -51,7 +57,7 @@
             "value": "Delete"
         },
         "virtualMachineSize": {
-            "value": "Standard_D4s_v3"
+            "value": "Standard_B2s"
         },
         "nicDeleteOption": {
             "value": "Delete"
@@ -76,12 +82,6 @@
         },
         "autoShutdownTimeZone": {
             "value": "SE Asia Standard Time"
-        },
-		"scripturi": {
-			"value" : "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/confscripts/"
-		},
-		"scriptfilename": {
-			"value" : "eus-ad19aconf.ps1"
-		}
+        }
     }
 }

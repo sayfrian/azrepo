@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus"
+            "value": "southeastasia"
         },
         "networkInterfaceName": {
             "value": "vnicws10b"
@@ -12,31 +12,31 @@
             "value": false
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/eus-nsgpbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/networkSecurityGroups/sea-nsgpbl"
         },
         "subnetName": {
-            "value": "eus-vnetpbl"
+            "value": "sea-vnetpbl"
         },
         "privateIPAddress": {
-            "value" : "10.0.0.12"
+            "value" : "11.0.0.12"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/virtualNetworks/sea-vnet"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipws10b"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/publicIPAddresses/sea-pipws10b"
         },
         "pipDeleteOption": {
             "value": "Delete"
         },
         "virtualMachineName": {
-            "value": "eus-vmws10b"
+            "value": "sea-vmws10b"
         },
         "virtualMachineComputerName": {
-            "value": "eus-vmws10b"
+            "value": "sea-vmws10b"
         },
         "virtualMachineRG": {
-            "value": "eus-rg"
+            "value": "sea-rg"
         },
         "imagePublisher": {
             "value": "MicrosoftWindowsDesktop"

@@ -3,20 +3,20 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus"
+            "value": "southeastasia"
         },
         "extendedLocation": {
             "value": {}
         },
         "virtualNetworkName": {
-            "value": "eus-vnet"
+            "value": "sea-vnet"
         },
         "resourceGroup": {
-            "value": "eus"
+            "value": "sea"
         },
         "addressSpaces": {
             "value": [
-                "10.0.0.0/16"
+                "11.0.0.0/16"
             ]
         },
         "ipv6Enabled": {
@@ -26,16 +26,16 @@
             "value": 1
         },
         "subnet0_name": {
-            "value": "eus-vnetpbl"
+            "value": "sea-vnetpbl"
         },
         "subnet0_addressRange": {
-            "value": "10.0.0.0/24"
+            "value": "11.0.0.0/24"
         },
         "subnet1_name": {
-            "value": "eus-vnetpvt"
+            "value": "sea-vnetpvt"
         },
         "subnet1_addressRange": {
-            "value": "10.0.1.0/24"
+            "value": "11.0.1.0/24"
         },
         "ddosProtectionPlanEnabled": {
             "value": false

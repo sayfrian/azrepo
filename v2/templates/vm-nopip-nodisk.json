@@ -183,7 +183,7 @@
                         "value": "[parameters('virtualMachineName')]"
                     },
                     "location": {
-                        "value": "eastus"
+                        "value": "southeastasia"
                     }
                 }
             },

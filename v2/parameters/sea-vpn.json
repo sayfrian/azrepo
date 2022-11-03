@@ -2,11 +2,17 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+		"resourcegroup": {
+			"value": "sea-rg"
+		},
+		"gatewaysubnet": {
+			"value": "Microsoft.Network/virtualNetworks/eus-vnet/subnets/GatewaySubnet"
+		},
         "location": {
-            "value": "eastus"
+            "value": "southeastasia"
         },
         "name": {
-            "value": "eus-vpn"
+            "value": "sea-vpn"
         },
         "gatewayType": {
             "value": "Vpn"
@@ -21,22 +27,22 @@
             "value": "Generation1"
         },
         "existingVirtualNetworkName": {
-            "value": "eus-vnet"
+            "value": "sea-vnet"
         },
         "newSubnetName": {
             "value": "GatewaySubnet"
         },
         "subnetAddressPrefix": {
-            "value": "10.0.2.0/24"
+            "value": "11.0.2.0/24"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipvpna"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/publicIPAddresses/sea-pipvpna"
         },
         "activeActive": {
             "value": true
         },
         "activeActiveGatewayPublicIpAddressId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipvpnb"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/publicIPAddresses/sea-pipvpnb"
         }
     }
 }

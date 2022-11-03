@@ -2,6 +2,12 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+		"resourcegroup": {
+			"type": "string"
+		},
+		"gatewaysubnet": {
+			"type": "string"
+		},
         "name": {
             "type": "string"
         },
@@ -56,7 +62,7 @@
             "type": "Microsoft.Network/virtualNetworkGateways",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "Microsoft.Network/virtualNetworks/eus-vnet/subnets/GatewaySubnet"
+                "[parameters('resourcegroup')]"
             ],
             "tags": {},
             "properties": {
@@ -67,7 +73,7 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[resourceId('eus-rg', 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
+                                "id": "[resourceId(parameters('resourcegroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
                             },
                             "publicIpAddress": {
                                 "id": "[parameters('publicIpAddressId')]"
@@ -82,7 +88,7 @@
                                 "id": "[parameters('activeActiveGatewayPublicIpAddressId')]"
                             },
                             "subnet": {
-                                "id": "[resourceId('eus-rg', 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
+                                "id": "[resourceId([parameters('resourcegroup')], 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
                             }
                         }
                     }

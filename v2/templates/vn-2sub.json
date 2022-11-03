@@ -58,20 +58,20 @@
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "10.0.0.0/16"
+                        "[parameters('addressSpaces')]"
                     ]
                 },
                 "subnets": [
                     {
                         "name": "[parameters('subnet0_name')]",
                         "properties": {
-                            "addressPrefix": "10.0.0.0/24"
+                            "addressPrefix": "[parameters('subnet0_addressRange')]"
                         }
                     },
                     {
                         "name": "[parameters('subnet1_name')]",
                         "properties": {
-                            "addressPrefix": "10.0.1.0/24"
+                            "addressPrefix": "[parameters('subnet1_addressRange')]"
                         }
                     }
                 ],

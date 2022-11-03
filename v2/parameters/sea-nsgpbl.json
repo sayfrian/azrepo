@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "networkSecurityGroupName": {
-            "value": "eus-nsgpbl"
+            "value": "sea-nsgpbl"
         },
         "location": {
-            "value": "eastus"
+            "value": "southeastasia"
         }
     }
 }

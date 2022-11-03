@@ -3,22 +3,22 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "networkInterfaceName": {
-            "value": "eus-vnicws10a"
+            "value": "sea-vnicws10b"
         },
         "location": {
-            "value": "eastus"
+            "value": "southeastasia"
         },
         "subnetId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet/subnets/eus-vnetpbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/virtualNetworks/sea-vnet/subnets/sea-vnetpbl"
         },
         "privateIPAllocationMethod": {
             "value": "Static"
         },
         "privateIPv4Address": {
-            "value": "10.0.0.221"
+            "value": "11.0.0.222"
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/eus-nsgpbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/sea-rg/providers/Microsoft.Network/networkSecurityGroups/sea-nsgpbl"
         }
     }
 }

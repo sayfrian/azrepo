@@ -52,14 +52,14 @@
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "10.0.0.0/16"
+                        "[parameters('addressSpaces')]"
                     ]
                 },
                 "subnets": [
                     {
-                        "name": "eus-vnetpbl",
+                        "name": "[parameters('subnet0_name')]",
                         "properties": {
-                            "addressPrefix": "10.0.0.0/24"
+                            "addressPrefix": "[parameters('subnet0_addressRange')]"
                         }
                     }
                 ],

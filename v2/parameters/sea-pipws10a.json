@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus"
+            "value": "southeastasia"
         },
         "extendedLocation": {
             "value": {}
@@ -12,7 +12,7 @@
             "value": "Basic"
         },
         "name": {
-            "value": "eus-pipvpna"
+            "value": "sea-pipws10a"
         },
         "publicIPAllocationMethod": {
             "value": "Dynamic"
@@ -24,7 +24,7 @@
             "value": "IPv4"
         },
         "domainNameLabel": {
-            "value": "eus-pipvpna"
+            "value": "sea-pipws10a"
         }
     }
 }

@@ -2,6 +2,12 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+		"resourcegroup": {
+			"value": "eus-rg"
+		},
+		"gatewaysubnet": {
+			"value": "Microsoft.Network/virtualNetworks/eus-vnet/subnets/GatewaySubnet"
+		},
         "location": {
             "value": "eastus"
         },
