@@ -12,7 +12,7 @@
             "value": false
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
         },
         "subnetName": {
             "value": "eus-vnetpbl"
@@ -21,10 +21,10 @@
             "value" : "10.0.0.11"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/vneteus-rg"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/publicIPAddresses/pipad19a"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/pipad19a"
         },
         "pipDeleteOption": {
             "value": "Delete"
@@ -36,7 +36,7 @@
             "value": "vmad19a"
         },
         "virtualMachineRG": {
-            "value": "minilico"
+            "value": "eus-rg"
         },
         "imagePublisher": {
             "value": "MicrosoftWindowsServer"

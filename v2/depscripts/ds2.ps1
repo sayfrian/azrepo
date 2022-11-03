@@ -1,14 +1,14 @@
-$rg = "minilico"
+$rg = "eus-rg"
 $loc = "eastus"
 
-$vnet = "vnetminilico"
+$vnet = "vneteus-rg"
 $nsgpbl = "nsgpbl"
 $nsgpvt = "nsgpvt"
 
 Write-Output `n "================================ ENVIRONMENT CREATION ================================"
 
 Write-Output `n "======================================================================================" 
-Write-Output    "================================  Creating RG: minilico   ================================" 
+Write-Output    "================================  Creating RG: eus-rg   ================================" 
 Write-Output    "======================================================================================" `n
 
 $check = Get-AzResourceGroup -Name $rg -ErrorAction SilentlyContinue
@@ -27,17 +27,17 @@ else{
 Write-Output `n "======================================================================================" 
 Write-Output    "=================================   Creating  VNET   =================================" 
 Write-Output    "======================================================================================" `n
-$rg = "minilico"
+$rg = "eus-rg"
 $loc = "eastus"
 
-$vnet = "vnetminilico"
+$vnet = "vneteus-rg"
 $nsgpbl = "nsgpbl"
 $nsgpvt = "nsgpvt"
 
 Write-Output `n "================================ ENVIRONMENT CREATION ================================"
 
 Write-Output `n "======================================================================================" 
-Write-Output    "================================  Creating RG: minilico   ================================" 
+Write-Output    "================================  Creating RG: eus-rg   ================================" 
 Write-Output    "======================================================================================" `n
 
 $check = Get-AzResourceGroup -Name $rg -ErrorAction SilentlyContinue
