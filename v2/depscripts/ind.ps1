@@ -8,7 +8,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vm-pip-nodisk.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameterseus-vmws10b.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vmws10b.json"
 	  
 }
 

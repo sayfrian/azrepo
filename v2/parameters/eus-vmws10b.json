@@ -6,7 +6,7 @@
             "value": "eastus"
         },
         "networkInterfaceName": {
-            "value": "vnicws10a"
+            "value": "vnicws10b"
         },
         "enableAcceleratedNetworking": {
             "value": false
@@ -24,16 +24,16 @@
             "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipws10a"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipws10b"
         },
         "pipDeleteOption": {
             "value": "Delete"
         },
         "virtualMachineName": {
-            "value": "eus-vmws10a"
+            "value": "eus-vmws10b"
         },
         "virtualMachineComputerName": {
-            "value": "eus-vmws10a"
+            "value": "eus-vmws10b"
         },
         "virtualMachineRG": {
             "value": "eus-rg"
