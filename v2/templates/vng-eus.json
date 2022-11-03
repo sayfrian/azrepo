@@ -1,9 +1,9 @@
 {
-  "id": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Resources/deployments/Microsoft.VirtualNetworkGateway-20221101141858",
+  "id": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Resources/deployments/Microsoft.VirtualNetworkGateway-20221101141858",
   "name": "Microsoft.VirtualNetworkGateway-20221101141858",
   "type": "Microsoft.Resources/deployments",
   "tags": {
-    "primaryResourceId": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/virtualNetworkGateways/vpn",
+    "primaryResourceId": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworkGateways/vpn",
     "marketplaceItemId": "Microsoft.VirtualNetworkGateway"
   },
   "properties": {
@@ -35,11 +35,11 @@
       },
       "subnetId": {
         "type": "String",
-        "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/virtualNetworks/vnetminilico/subnets/GatewaySubnet"
+        "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/vnetminilico/subnets/GatewaySubnet"
       },
       "publicIpAddressId": {
         "type": "String",
-        "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/publicIPAddresses/vpn-ip"
+        "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/vpn-ip"
       }
     },
     "mode": "Incremental",
@@ -66,7 +66,7 @@
     "dependencies": [],
     "outputResources": [
       {
-        "id": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus/providers/Microsoft.Network/virtualNetworkGateways/vpn"
+        "id": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworkGateways/vpn"
       }
     ],
     "validationLevel": "Template"
