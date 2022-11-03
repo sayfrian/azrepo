@@ -62,7 +62,7 @@
             "type": "Microsoft.Network/virtualNetworkGateways",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[parameters('resourcegroup')]"
+                "[parameters('gatewaysubnet')]"
             ],
             "tags": {},
             "properties": {
@@ -73,7 +73,7 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[resourceId(parameters('resourcegroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
+                                "id": "[parameters('resourcegroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
                             },
                             "publicIpAddress": {
                                 "id": "[parameters('publicIpAddressId')]"
