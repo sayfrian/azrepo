@@ -88,7 +88,7 @@
                                 "id": "[parameters('activeActiveGatewayPublicIpAddressId')]"
                             },
                             "subnet": {
-                                "id": "[resourceId([parameters('resourcegroup')], 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
+                                "id": "[resourceId(parameters('resourcegroup'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('newSubnetName'))]"
                             }
                         }
                     }

@@ -1,14 +1,14 @@
 Write-Output `n "======================================================================================" 
-Write-Output    "================================   Allow RDP to Pbl   ================================" 
+Write-Output    "===============================   Allow RDP from EUS   ===============================" 
 Write-Output    "======================================================================================" `n
 
-$nsg = 'eus-nsgpbl'
-$dsc = 'allow RDP from public'
+$nsg = 'sea-nsgpvt'
+$dsc = 'allow RDP from EUS'
 $acc = 'allow'
 $ptc = 'TCP'
 $drc = 'Inbound'
-$pty = 100
-$sap = (Invoke-WebRequest -uri "https://ipinfo.io/ip").Content
+$pty = 101
+$sap = '10.0.0.0/16'
 $spr = '*'
 $dap = '*'
 $dpr = 3389
@@ -52,19 +52,19 @@ else
 $nsg | Set-AzNetworkSecurityGroup
 
 Write-Output `n "======================================================================================" 
-Write-Output    "================================   Allow RDP to Pvt   ================================" 
+Write-Output    "==============================   Allow ICMP from EUS   ===============================" 
 Write-Output    "======================================================================================" `n
 
-$nsg = 'eus-nsgpvt'
-$dsc = 'allow RDP from nsgpbl'
+$nsg = 'sea-nsgpvt'
+$dsc = 'allow ICMP from SEA'
 $acc = 'allow'
-$ptc = 'TCP'
+$ptc = 'ICMP'
 $drc = 'Inbound'
-$pty = 100
-$sap = '10.0.0.0/24'
+$pty = 102
+$sap = '10.0.0.0/16'
 $spr = '*'
 $dap = '*'
-$dpr = 3389
+$dpr = '*'
 $nsg = Get-AzNetworkSecurityGroup -Name $nsg
 
 $ruleexists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains($dsc);
