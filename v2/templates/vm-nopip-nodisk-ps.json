@@ -182,7 +182,7 @@
 		{
 		  "type": "Microsoft.Compute/virtualMachines/extensions",
 		  "apiVersion": "2021-04-01",
-		  "name": "[concat(parameters('virtualMachineName'),'/','parameters('scriptfilename'))]",
+		  "name": "[concat(parameters('virtualMachineName'),'/',parameters('scriptfilename'))]",
 		  "location": "[parameters('location')]",
 		  "vmName": "[parameters('virtualMachineName')]",
 		  "properties": {
@@ -192,7 +192,7 @@
 			"autoUpgradeMinorVersion": true,
 			"settings": {
 			  "fileUris": [
-				"[concat(parameters('scripturi'), parameters('scriptfilename'))]"
+				"[concat(parameters('scripturi'),parameters('scriptfilename'))]"
 			  ],
 			  "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File ', parameters('scriptfilename'))]"
 			}
