@@ -6,7 +6,7 @@
             "value": "eastus"
         },
         "networkInterfaceName": {
-            "value": "vnicws10a"
+            "value": "eus-vnicws10a"
         },
         "enableAcceleratedNetworking": {
             "value": false

@@ -1,105 +1,42 @@
-Write-Output `n "======================================================================================" 
-Write-Output    "===============================   Allow RDP from EUS   ===============================" 
-Write-Output    "======================================================================================" `n
+$lc = 'sea-'
+$rg = $lc + 'rg'
+$post = 'a'
+$oldvnic = 'vnicws10' + $post
+$pip = $lc + 'pipws10' + $post
+$vmName = $lc + 'vmws10' + $post
+$newvnic = $lc + 'vnicws10' + $post
+$privateip = '11.0.0.11'
 
-$nsg = 'sea-nsgpvt'
-$dsc = 'allow RDP from EUS'
-$acc = 'allow'
-$ptc = 'TCP'
-$drc = 'Inbound'
-$pty = 101
-$sap = '10.0.0.0/16'
-$spr = '*'
-$dap = '*'
-$dpr = 3389
-$nsg = Get-AzNetworkSecurityGroup -Name $nsg
+$nnic = Get-AzNetworkInterface -Name $newvnic -ResourceGroupName $rg
+#$nnic
 
-$ruleexists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains($dsc);
-
-if($ruleexists)
-{
-	# Update the existing rule with the new IP address
-	Set-AzNetworkSecurityRuleConfig `
-		-Name $dsc `
-		-Description $dsc `
-		-Access $acc `
-		-Protocol $ptc `
-		-Direction $drc `
-		-Priority $pty `
-		-SourceAddressPrefix $sap `
-		-SourcePortRange $spr `
-		-DestinationAddressPrefix $dap `
-		-DestinationPortRange $dpr `
-		-NetworkSecurityGroup $nsg
+$net = @{
+    Name = $lc + 'vnet'
+    ResourceGroupName = $rg
 }
-else
-{
-	# Create a new rule
-	$nsg | Add-AzNetworkSecurityRuleConfig `
-		-Name $dsc `
-		-Description $dsc `
-		-Access $acc `
-		-Protocol $ptc `
-		-Direction $drc `
-		-Priority $pty `
-		-SourceAddressPrefix $sap `
-		-SourcePortRange $spr `
-		-DestinationAddressPrefix $dap `
-		-DestinationPortRange $dpr
+$vnet = Get-AzVirtualNetwork @net
+#$vnet
+
+
+$config = Get-AzNetworkInterfaceipConfig -NetworkInterface $nnic
+$config = $config.name
+#$config
+
+## Place subnet configuration into a variable. ##
+$sub = @{
+    Name = $lc + 'vnetpbl'
+    VirtualNetwork = $vnet
 }
+$subnet = Get-AzVirtualNetworkSubnetConfig @sub
+#$subnet
 
-# Save changes to the NSG
-$nsg | Set-AzNetworkSecurityGroup
-
-Write-Output `n "======================================================================================" 
-Write-Output    "==============================   Allow ICMP from EUS   ===============================" 
-Write-Output    "======================================================================================" `n
-
-$nsg = 'sea-nsgpvt'
-$dsc = 'allow ICMP from SEA'
-$acc = 'allow'
-$ptc = 'ICMP'
-$drc = 'Inbound'
-$pty = 102
-$sap = '10.0.0.0/16'
-$spr = '*'
-$dap = '*'
-$dpr = '*'
-$nsg = Get-AzNetworkSecurityGroup -Name $nsg
-
-$ruleexists = (Get-AzNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg).Name.Contains($dsc);
-
-if($ruleexists)
-{
-	# Update the existing rule with the new IP address
-	Set-AzNetworkSecurityRuleConfig `
-		-Name $dsc `
-		-Description $dsc `
-		-Access $acc `
-		-Protocol $ptc `
-		-Direction $drc `
-		-Priority $pty `
-		-SourceAddressPrefix $sap `
-		-SourcePortRange $spr `
-		-DestinationAddressPrefix $dap `
-		-DestinationPortRange $dpr `
-		-NetworkSecurityGroup $nsg
+#change IP of the current VNIC
+$config =@{
+    Name = $config
+    PrivateIpAddress = $privateip
+    Subnet = $subnet
 }
-else
-{
-	# Create a new rule
-	$nsg | Add-AzNetworkSecurityRuleConfig `
-		-Name $dsc `
-		-Description $dsc `
-		-Access $acc `
-		-Protocol $ptc `
-		-Direction $drc `
-		-Priority $pty `
-		-SourceAddressPrefix $sap `
-		-SourcePortRange $spr `
-		-DestinationAddressPrefix $dap `
-		-DestinationPortRange $dpr
-}
+$nnic | Set-AzNetworkInterfaceIpConfig @config -Primary
 
-# Save changes to the NSG
-$nsg | Set-AzNetworkSecurityGroup
+## Save interface configuration. ##
+$nnic | Set-AzNetworkInterface

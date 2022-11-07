@@ -6,7 +6,7 @@
             "value": "southeastasia"
         },
         "networkInterfaceName": {
-            "value": "vnicws10b"
+            "value": "sea-vnicws10b"
         },
         "enableAcceleratedNetworking": {
             "value": false

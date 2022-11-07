@@ -241,7 +241,7 @@ Write-Output `n "===============================================================
 Write-Output    "==============================  Creating VNetIntface  ================================" 
 Write-Output    "======================================================================================" `n
 
-$check = Get-AzNetworkInterface -Name 'vnicws10a' -ErrorAction SilentlyContinue
+$check = Get-AzNetworkInterface -Name 'eus-vnicws10a' -ErrorAction SilentlyContinue
 
 if($check -eq $null){
 

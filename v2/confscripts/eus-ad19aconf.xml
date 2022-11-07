@@ -16,7 +16,7 @@
         </TN>
         <ToString>ServerComponent_AD_Domain_Services</ToString>
         <Props>
-          <S N="PSComputerName">sea-vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">10</I32>
@@ -30,7 +30,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                   <S N="MiXml">&lt;CLASS NAME="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -39,7 +39,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_AD_Domain_Services</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253203704</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_AD_Domain_Services" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;8.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;AD-Domain-Services&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -59,7 +59,7 @@
         </TN>
         <ToString>ServerComponent_DNS</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">13</I32>
@@ -70,7 +70,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -78,7 +78,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_DNS</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253153784</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_DNS" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;8.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;DNS&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -98,7 +98,7 @@
         </TN>
         <ToString>ServerComponent_GPMC</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">69</I32>
@@ -109,7 +109,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -117,7 +117,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_GPMC</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253067464</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_GPMC" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;10.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;GPMC&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -137,7 +137,7 @@
         </TN>
         <ToString>ServerComponent_RSAT</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">67</I32>
@@ -148,7 +148,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -156,7 +156,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254579336</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;8.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -176,7 +176,7 @@
         </TN>
         <ToString>ServerComponent_RSAT_AD_AdminCenter</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">330</I32>
@@ -187,7 +187,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -195,7 +195,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT_AD_AdminCenter</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254573096</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_AD_AdminCenter" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;0.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-AD-AdminCenter&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -215,7 +215,7 @@
         </TN>
         <ToString>ServerComponent_RSAT_AD_PowerShell</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">331</I32>
@@ -226,7 +226,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -234,7 +234,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT_AD_PowerShell</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254563736</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_AD_PowerShell" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;0.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-AD-PowerShell&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -254,7 +254,7 @@
         </TN>
         <ToString>ServerComponent_RSAT_AD_Tools</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">329</I32>
@@ -265,7 +265,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -273,7 +273,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT_AD_Tools</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254568936</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_AD_Tools" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;0.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-AD-Tools&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -293,7 +293,7 @@
         </TN>
         <ToString>ServerComponent_RSAT_ADDS</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">257</I32>
@@ -304,7 +304,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -312,7 +312,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT_ADDS</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254558536</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_ADDS" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;0.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-ADDS&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -332,7 +332,7 @@
         </TN>
         <ToString>ServerComponent_RSAT_ADDS_Tools</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">299</I32>
@@ -343,7 +343,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -351,7 +351,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT_ADDS_Tools</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254565816</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_ADDS_Tools" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;0.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-ADDS-Tools&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -371,7 +371,7 @@
         </TN>
         <ToString>ServerComponent_RSAT_DNS_Server</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">273</I32>
@@ -382,7 +382,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -390,7 +390,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT_DNS_Server</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254566856</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_DNS_Server" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;8.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-DNS-Server&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
@@ -410,7 +410,7 @@
         </TN>
         <ToString>ServerComponent_RSAT_Role_Tools</ToString>
         <Props>
-          <S N="PSComputerName">vmad19a</S>
+          <S N="PSComputerName">eus-vmad19a</S>
         </Props>
         <MS>
           <I32 N="NumericId">256</I32>
@@ -421,7 +421,7 @@
                 <MS>
                   <S N="ClassName">MSFT_ServerManagerServerComponentDescriptor</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-253209944</I32>
                 </MS>
               </Obj>
@@ -429,7 +429,7 @@
                 <MS>
                   <S N="ClassName">ServerComponent_RSAT_Role_Tools</S>
                   <S N="Namespace">ROOT/Microsoft/Windows/ServerManager</S>
-                  <S N="ServerName">vmad19a</S>
+                  <S N="ServerName">eus-vmad19a</S>
                   <I32 N="Hash">-254486776</I32>
                   <S N="MiXml">&lt;CLASS NAME="ServerComponent_RSAT_Role_Tools" SUPERCLASS="MSFT_ServerManagerServerComponentDescriptor"&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;deploymentprovider&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;8.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="DisplayName" TYPE="string" TRANSLATABLE="true"&gt;&lt;VALUE&gt;RSAT-Role-Tools&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
                 </MS>
