@@ -1,20 +1,24 @@
-$pip = 'sea-pipad19a'
-$rg = 'sea-rg'
+$msg = 'ATTACH NEW PIP'
+Write-Output `n "==================================================================" 
+Write-Output    "Started: " + $msg 
+Write-Output    "==================================================================" `n
 
-$check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
+$lc = 'sea-'
+$rg = $lc + 'rg'
+$post = 'a'
+$os = 'ad19'
+$nic = $lc + 'vnic' + $os + $post
+$pip = $lc + 'pip' + $os + $post
 
-if($check -eq $null){
+$nic = Get-AzNetworkInterface -Name $nic -ResourceGroupName $rg
+$pip = Get-AzPublicIpAddress -Name $pip -ResourceGroup $rg
+$config = Get-AzNetworkInterfaceipConfig -NetworkInterface $nic
+$config = $config.name
 
-	New-AzResourceGroupDeployment `
-	  -Name remoteTemplateDeployment `
-	  -ResourceGroupName $rg `
-	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/pipBsc.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$pip.json"
-	  
-}
+#attach to public ip
+$nic | Set-AzNetworkInterfaceIpConfig -Name $config -PublicIPAddress $pip
+$nic | Set-AzNetworkInterface
 
-else{
-
-    Write-Host " $pip already exist"
-
-}
+Write-Output `n "==================================================================" 
+Write-Output    "Completed: " + $msg
+Write-Output    "==================================================================" `n

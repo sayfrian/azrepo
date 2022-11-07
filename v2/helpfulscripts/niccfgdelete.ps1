@@ -1,22 +1,24 @@
-$msg = 'ATTACH NEW PIP'
+$msg = 'REMOVE IPCONFIG'
 Write-Output `n "==================================================================" 
 Write-Output    "Started: " + $msg 
 Write-Output    "==================================================================" `n
 
-$lc = 'eus-'
+$lc = 'sea-'
 $rg = $lc + 'rg'
 $post = 'a'
-$os = 'ws10'
-$nic = 'vnic' + $os + $post
-$pip = $lc + 'pip' + $os+ $post
+$os = 'ad19'
+$nic = $lc + 'vnic' + $os + $post
+$config = 'ipconfig2'
 
 $nic = Get-AzNetworkInterface -Name $nic -ResourceGroupName $rg
-$pip = Get-AzPublicIpAddress -Name $pip -ResourceGroup $rg
-$config = Get-AzNetworkInterfaceipConfig -NetworkInterface $nic
-$config = $config.name
 
-#attach to public ip
-$nic | Set-AzNetworkInterfaceIpConfig -Name $config -PublicIPAddress $pip
+#change IP of the current VNIC
+$config =@{
+    Name = $config
+}
+$nic | Remove-AzNetworkInterfaceIpConfig @config
+
+## Save interface configuration. ##
 $nic | Set-AzNetworkInterface
 
 Write-Output `n "==================================================================" 
