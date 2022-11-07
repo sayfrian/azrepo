@@ -27,7 +27,7 @@
             "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipws10a"
         },
         "pipDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "virtualMachineName": {
             "value": "eus-vmws10a"
@@ -60,7 +60,7 @@
             "value": "Standard_B2s"
         },
         "nicDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "adminUsername": {
             "value": "rian"

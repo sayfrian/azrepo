@@ -1,24 +1,19 @@
-$msg = 'ATTACH NEW PIP'
-Write-Output `n "==================================================================" 
-Write-Output    "Started: " + $msg 
-Write-Output    "==================================================================" `n
+$vnic = 'sea-vnicad19a'
 
-$lc = 'sea-'
-$rg = $lc + 'rg'
-$post = 'a'
-$os = 'ad19'
-$nic = $lc + 'vnic' + $os + $post
-$pip = $lc + 'pip' + $os + $post
+$check = Get-AzNetworkInterface -Name $vnic -ErrorAction SilentlyContinue
 
-$nic = Get-AzNetworkInterface -Name $nic -ResourceGroupName $rg
-$pip = Get-AzPublicIpAddress -Name $pip -ResourceGroup $rg
-$config = Get-AzNetworkInterfaceipConfig -NetworkInterface $nic
-$config = $config.name
+if($check -eq $null){
 
-#attach to public ip
-$nic | Set-AzNetworkInterfaceIpConfig -Name $config -PublicIPAddress $pip
-$nic | Set-AzNetworkInterface
+	New-AzResourceGroupDeployment `
+	  -Name remoteTemplateDeployment `
+	  -ResourceGroupName $rg `
+	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vnic-ip4.json" `
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vnic.json"
+	  
+}
 
-Write-Output `n "==================================================================" 
-Write-Output    "Completed: " + $msg
-Write-Output    "==================================================================" `n
+else{
+
+    Write-Host "$vnic already exist"
+
+}

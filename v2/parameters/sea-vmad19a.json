@@ -54,7 +54,7 @@
             "value": "Standard_D4s_v3"
         },
         "nicDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "adminUsername": {
             "value": "rian"
