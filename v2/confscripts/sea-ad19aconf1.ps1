@@ -33,4 +33,3 @@ Write-Output    "===============================================================
 mkdir 'C:\TEMP Downloads'
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/confscripts/sea-ad19aconf.xml" -OutFile 'C:\TEMP Downloads\addns.xml'
 Install-WindowsFeature -ConfigurationFilePath 'C:\TEMP Downloads\addns.xml'
-

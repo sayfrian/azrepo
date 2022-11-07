@@ -5,7 +5,7 @@ Write-Output    "===============================================================
 $IP = "11.0.1.11"
 $MaskBits = 24 # This means subnet mask = 255.255.255.0
 $Gateway = "11.0.1.1"
-$Dns = @('11.0.1.11','8.8.8.8')
+$Dns = @('10.0.1.11','8.8.8.8')
 $IPType = "IPv4"
 
 # Retrieve the network adapter that you want to configure
