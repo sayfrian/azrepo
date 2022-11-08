@@ -30,7 +30,7 @@
             "value": "eus-vmad19a"
         },
         "virtualMachineRG": {
-            "value": "eus"
+            "value": "eus-rg"
         },
         "imagePublisher": {
             "value": "MicrosoftWindowsServer"

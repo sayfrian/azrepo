@@ -6,37 +6,37 @@
             "value": "eastus"
         },
         "networkInterfaceName": {
-            "value": "vnicex19a"
+            "value": "eus-vnicex19a"
         },
         "enableAcceleratedNetworking": {
             "value": false
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/networkSecurityGroups/nsgPbl"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/networkSecurityGroups/eus-nsgpvt"
         },
         "subnetName": {
-            "value": "vnetPbl"
+            "value": "eus-vnetpvt"
         },
         "privateIPAddress": {
-            "value" : "10.0.0.12"
+            "value" : "10.0.1.12"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/virtualNetworks/vnetminilico"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/virtualNetworks/eus-vnet"
         },
         "publicIpAddressId": {
-            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/minilico/providers/Microsoft.Network/publicIPAddresses/pipex19a"
+            "value": "/subscriptions/e83bf359-b68a-43d7-8ff5-2efb1e4e6124/resourceGroups/eus-rg/providers/Microsoft.Network/publicIPAddresses/eus-pipex19a"
         },
         "pipDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "virtualMachineName": {
-            "value": "vmex19a"
+            "value": "eus-vmex19a"
         },
         "virtualMachineComputerName": {
-            "value": "vmex19a"
+            "value": "eus-vmex19a"
         },
         "virtualMachineRG": {
-            "value": "minilico"
+            "value": "eus-rg"
         },
         "imagePublisher": {
             "value": "MicrosoftWindowsServer"
@@ -57,10 +57,10 @@
             "value": "Delete"
         },
         "virtualMachineSize": {
-            "value": "Standard_B2ms"
+            "value": "Standard_D4s_v3"
         },
         "nicDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "adminUsername": {
             "value": "rian"
@@ -82,6 +82,12 @@
         },
         "autoShutdownTimeZone": {
             "value": "SE Asia Standard Time"
-        }
+        },
+		"scripturi": {
+			"value" : "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/confscripts/"
+		},
+		"scriptfilename": {
+			"value" : "eus-ex19aconf1.ps1"
+		}
     }
 }

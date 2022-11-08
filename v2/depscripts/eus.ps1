@@ -4,7 +4,8 @@ Write-Output `n "===============================================================
 Write-Output    "================================  Creating  RG: EUS   ================================" 
 Write-Output    "======================================================================================" `n
 
-$rg = "eus-rg"
+$lc = "eus" + "-"
+$rg = $lc + "rg"
 $loc = "eastus"
 
 $check = Get-AzResourceGroup -Name $rg -ErrorAction SilentlyContinue
@@ -24,7 +25,7 @@ Write-Output `n "===============================================================
 Write-Output    "=================================   Creating  VNET   =================================" 
 Write-Output    "======================================================================================" `n
 
-$vnet = "eus-vnet"
+$vnet = $lc + "vnet"
 
 $check = Get-AzVirtualNetwork -Name $vnet -ErrorAction SilentlyContinue
 
@@ -46,7 +47,7 @@ Write-Output `n "===============================================================
 Write-Output    "==================================   Creating NSG   ==================================" 
 Write-Output    "======================================================================================" `n
 
-$nsg = 'eus-nsgpbl'
+$nsg = $lc + "nsgpbl"
 
 $check = Get-AzNetworkSecurityGroup -Name $nsg -ErrorAction SilentlyContinue
 
@@ -68,7 +69,7 @@ else{
 
 Write-Output    "===================================  On progress  ====================================" 
 
-$nsg = 'eus-nsgpvt'
+$nsg = $lc + "nsgpvt"
 
 $check = Get-AzNetworkSecurityGroup -Name $nsg -ErrorAction SilentlyContinue
 
@@ -92,7 +93,7 @@ Write-Output `n "===============================================================
 Write-Output    "===============================  Creating PublicIPAdd ================================" 
 Write-Output    "======================================================================================" `n 
 
-$pip = 'eus-pipws10a'
+$pip = $lc + "pipws10a"
 
 $check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
 
@@ -114,7 +115,7 @@ else{
 
 Write-Output    "===================================  On progress  ===================================="
 
-$pip = 'eus-pipws10b'
+$pip = $lc + "pipws10b"
 
 $check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
 
@@ -136,7 +137,7 @@ else{
 
 Write-Output    "===================================  On progress  ===================================="
 
-$pip = 'eus-pipvpna'
+$pip = $lc + "pipvpna"
 
 $check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
 
@@ -158,7 +159,7 @@ else{
 
 Write-Output    "===================================  On progress  ===================================="
 
-$pip = 'eus-pipvpnb'
+$pip = $lc + "pipvpnb"
 
 $check = Get-AzPublicIpAddress -Name $pip -ErrorAction SilentlyContinue
 
@@ -182,7 +183,7 @@ Write-Output `n "===============================================================
 Write-Output    "==============================  Creating VPN Network  ================================" 
 Write-Output    "======================================================================================" `n
 
-$vpn = 'eus-vpn'
+$vpn = $lc + "vpn"
 
 $check = Get-AzPublicIpAddress -Name $vpn -ErrorAction SilentlyContinue
 
@@ -206,7 +207,7 @@ Write-Output `n "===============================================================
 Write-Output    "==============================  Creating VNetIntface  ================================" 
 Write-Output    "======================================================================================" `n
 
-$vnic = 'eus-vnicad19a'
+$vnic = $lc + "vnicad19a"
 
 $check = Get-AzNetworkInterface -Name $vnic -ErrorAction SilentlyContinue
 
@@ -228,7 +229,7 @@ else{
 
 Write-Output    "===================================  On progress  ====================================" 
 
-$vnic = 'eus-vnicws10a'
+$vnic = $lc + "vnicws10a"
 
 $check = Get-AzNetworkInterface -Name $vnic -ErrorAction SilentlyContinue
 
@@ -250,7 +251,7 @@ else{
 
 Write-Output    "===================================  On progress  ====================================" 
 
-$vnic = 'eus-vnicws10b'
+$vnic = $lc + "vnicws10b"
 
 $check = Get-AzNetworkInterface -Name $vnic -ErrorAction SilentlyContinue
 
@@ -274,7 +275,7 @@ Write-Output `n "===============================================================
 Write-Output    "================================     Creating VM      ================================" 
 Write-Output    "======================================================================================" `n
 
-$vm = 'eus-vmad19a'
+$vm = $lc + "vmad19a"
 
 $check = Get-AzVM -Name $vm -ErrorAction SilentlyContinue
 
@@ -284,7 +285,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vm-nopip-nodisk-ps.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vmad19a.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vm.json"
 	  
 }
 
@@ -296,7 +297,7 @@ else{
 
 Write-Output    "===================================  On progress  ====================================" 
 
-$vm = 'eus-vmws10a'
+$vm = $lc + "vmws10a"
 
 $check = Get-AzVM -Name $vm -ErrorAction SilentlyContinue
 
@@ -306,7 +307,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vm-pip-nodisk.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameterseus-vmws10a.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vm.json"
 	  
 }
 
@@ -318,7 +319,7 @@ else{
 
 Write-Output    "===================================  On progress  ====================================" 
 
-$vm = 'eus-vmws10b'
+$vm = $lc + "vmws10b"
 
 $check = Get-AzVM -Name $vm -ErrorAction SilentlyContinue
 
@@ -328,7 +329,7 @@ if($check -eq $null){
 	  -Name remoteTemplateDeployment `
 	  -ResourceGroupName $rg `
 	  -TemplateUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/templates/vm-pip-nodisk.json" `
-	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/eus-vmws10b.json"
+	  -TemplateParameterUri "https://raw.githubusercontent.com/sayfuladrian/azrepo/main/v2/parameters/$vm.json"
 	  
 }
 

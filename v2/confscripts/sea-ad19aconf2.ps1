@@ -5,7 +5,7 @@ Write-Output    "===============================================================
 $IP = "11.0.1.11"
 $MaskBits = 24 # This means subnet mask = 255.255.255.0
 $Gateway = "11.0.1.1"
-$Dns = @('10.0.1.11','8.8.8.8')
+$Dns = @('10.0.1.11','11.0.1.11')
 $IPType = "IPv4"
 
 # Retrieve the network adapter that you want to configure
@@ -29,6 +29,17 @@ $adapter | New-NetIPAddress `
 
 # Configure the DNS client server IP addresses
 $adapter | Set-DnsClientServerAddress -ServerAddresses $DNS
+
+Write-Output `n "======================================================================================" 
+Write-Output    "===================================  Join Domain  ====================================" 
+Write-Output    "======================================================================================" `n
+
+$dc = "minilico.xyz" # Specify the domain to join.
+$pw = "Jakarta@2022" | ConvertTo-SecureString -asPlainText –Force # Specify the password for the domain admin.
+$usr = "$dc\rian" # Specify the domain admin account.
+$creds = New-Object System.Management.Automation.PSCredential($usr,$pw)
+Add-Computer -DomainName $dc -Credential $creds -restart -force -verbose 
+# Note that the computer will be restarted automatically.
 
 Write-Output `n "======================================================================================" 
 Write-Output    "=========================  COMPLETE | COMPLETE | COMPLETE  ===========================" 
