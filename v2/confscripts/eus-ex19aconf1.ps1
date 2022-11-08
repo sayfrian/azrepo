@@ -106,18 +106,3 @@ Write-Output `n "==========================  Pre-requisite:  Installation  =====
 
 Start-Process -FilePath "C:\TEMP Downloads\vcredist2012_x64.exe" /silent -verbose
 Start-Process -FilePath "C:\TEMP Downloads\vcredist2013_x64.exe" /silent -verbose
-
-Write-Output `n "======================================================================================" 
-Write-Output    "===================================  Join Domain  ====================================" 
-Write-Output    "======================================================================================" `n
-
-$dc = "minilico.xyz" # Specify the domain to join.
-$pw = "Jakarta@2022" | ConvertTo-SecureString -asPlainText –Force # Specify the password for the domain admin.
-$usr = "$dc\rian" # Specify the domain admin account.
-$creds = New-Object System.Management.Automation.PSCredential($usr,$pw)
-Add-Computer -DomainName $dc -Credential $creds -restart -force -verbose 
-# Note that the computer will be restarted automatically.
-
-Write-Output `n "======================================================================================" 
-Write-Output    "=========================  COMPLETE | COMPLETE | COMPLETE  ===========================" 
-Write-Output    "======================================================================================" `n
