@@ -16,7 +16,7 @@ Write-Output `n "===============================================================
 Write-Output    "==============================  Create DB&LOG NTDS AD  ===============================" 
 Write-Output    "======================================================================================" `n
 
-New-Item -ItemType Directory -Force -Path C:\TEMP Downloads\
+New-Item -ItemType Directory -Force -Path "C:\TEMP Downloads\"
 
 Write-Output `n "======================================================================================" 
 Write-Output    "==============================  Install Google Chrome  ===============================" 
