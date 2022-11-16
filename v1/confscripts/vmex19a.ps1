@@ -133,13 +133,13 @@ Write-Output `n "==========================  Pre-requisite:  Installation  =====
 Start-Process -FilePath "C:\TEMP Downloads\vcredist2012_x64.exe" /silent -verbose
 Start-Process -FilePath "C:\TEMP Downloads\vcredist2013_x64.exe" /silent -verbose
 
-Start-Process -FilePath "C:\TEMP Downloads\netfw_4-8.exe" /silent -verbose
+Start-Process -FilePath "C:\TEMP Downloads\netfw_4-8.exe" -verbose
 $confirmation = Read-Host "Udah selesai installnya? [pencet enter kalo udah]"
 
-Start-Process -FilePath "C:\TEMP Downloads\UcmaSetup.exe" /silent -verbose
+Start-Process -FilePath "C:\TEMP Downloads\UcmaSetup.exe" -verbose
 $confirmation = Read-Host "Udah selesai installnya? [pencet enter kalo udah]"
 
-Start-Process -FilePath "C:\TEMP Downloads\rewrite21.msi" /silent -verbose
+Start-Process -FilePath "C:\TEMP Downloads\rewrite21.msi" -verbose
 $confirmation = Read-Host "Udah selesai installnya? [pencet enter kalo udah]"
 
 Write-Output `n "=========================  Exchange Inst.  Prepare Schema  =========================" `n
@@ -174,7 +174,7 @@ Write-Output "ObjectVersion (Configuration): $((Get-ADObject -LDAPFilter $fl -Se
 
 Write-Output `n "===============================  Run Installation  ================================" `n
 
-cd 'C:\TEMP Downloads\Exchange\'
+cd E:\
 .\Setup.exe 
 
 Write-Output `n "=================================  Add License  ===================================" `n
